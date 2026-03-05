@@ -1,0 +1,134 @@
+# DNA63 .gitignore - Flutter + Android + iOS
+# ===============================================
+
+# SECRETS - NEVER COMMIT THESE
+# -----------------------------
+key.properties
+*.jks
+*.keystore
+*.p12
+*.p8
+*.pem
+google-services.json
+GoogleService-Info.plist
+firebase.json
+serviceAccountKey.json
+credentials/
+secrets/
+.env
+.env.*
+*.key
+android/app/keystore/
+android/key.properties
+android/id_rsa
+android/id_rsa.pub
+
+# FLUTTER BUILD OUTPUTS
+# --------------------
+.dart_tool/
+build/
+.dart_tool/
+flutter-plugins
+flutter-plugins-dependencies
+.generated_plugin_registrant.dart
+GeneratedPluginRegistrant.java
+GeneratedPluginRegistrant.swift
+
+# ANDROID
+# -------
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/*.iml
+android/.gradle/
+android/.idea/
+android/build/
+android/captures/
+android/gradle/
+android/gradlew
+android/gradlew.bat
+android/gradle.properties
+coverage/
+android/fastlane/Preview.html
+android/fastlane/report.xml
+android/fastlane/test_output/
+android/fastlane/README.md
+
+# iOS
+# ---
+ios/Pods/
+ios/.symlinks/
+ios/DerivedData/
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Generated.xcconfig
+ios/Runner.xcworkspace/
+ios/*.pbxuser
+ios/*.mode1v3
+ios/*.mode2v3
+ios/*.moved-aside
+ios/*.xcuserstate
+ios/*.xcscmblueprint
+ios/*.xccheckout
+ios/.generated/
+ios/build/
+ios/Flutter/flutter_export_environment.sh
+ios/Podfile.lock
+ios/Runner.xcodeproj/
+ios/*.dSYM.zip
+ios/*.ipa
+
+# WEB
+# ---
+web/.dart_tool/
+web/build/
+
+# IDE
+# ---
+.vscode/
+.idea/
+.env
+*.iml
+*.ipr
+*.iws
+.DS_Store
+.classpath
+.project
+.settings/
+*.swp
+*.swo
+*~
+
+# LOGS
+# ----
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# PUB
+# ---
+.pub/
+.packages
+pubspec.lock
+
+# TEST
+# ------
+test/coverage_reports/
+
+# TEMP
+# ----
+*.tmp
+*.temp
+tmp/
+.tmp/
+
+# SYMLINKS
+# --------
+pubspec.lock  # Uncomment if auto-generated
+
+# EXCEPTIONS - KEEP THESE
+# -----------------------
+# Manual keystore references (example files only)
+!android/app/example.keystore.template

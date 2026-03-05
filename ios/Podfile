@@ -1,0 +1,109 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '14.0'
+
+# CocoaPods analytics sends network stats synchronously affecting flutter build latency.
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+project 'Runner', {
+  'Debug' => :debug,
+  'Profile' => :release,
+  'Release' => :release,
+}
+
+def flutter_root
+  generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'Generated.xcconfig'), __FILE__)
+  unless File.exist?(generated_xcode_build_settings_path)
+    raise "#{generated_xcode_build_settings_path} must exist. If you're running pod install manually, make sure flutter pub get is executed first"
+  end
+
+  File.foreach(generated_xcode_build_settings_path) do |line|
+    matches = line.match(/FLUTTER_ROOT\=(.*)/)
+    return matches[1].strip if matches
+  end
+  raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}. Try deleting Generated.xcconfig, then run flutter pub get"
+end
+
+require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), flutter_root)
+
+flutter_ios_podfile_setup
+
+target 'Runner' do
+  use_frameworks!
+  use_modular_headers!
+
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+end
+
+post_install do |installer|
+
+  bitcode_strip_path = `xcrun --find bitcode_strip`.chop!
+
+  def strip_bitcode_from_framework(bitcode_strip_path, framework_relative_path)
+    framework_path = File.join(Dir.pwd, framework_relative_path)
+    command = "#{bitcode_strip_path} #{framework_path} -r -o #{framework_path}"
+    puts "Stripping bitcode: #{command}"
+    system(command)
+  end
+
+  framework_paths = [
+    "Pods/AgoraIrisRTC_iOS/AgoraAIDenoiseExtension.xcframework/ios-arm64_armv7/AgoraAIDenoiseExtension.framework/AgoraAIDenoiseExtension",
+    "Pods/AgoraIrisRTC_iOS/AgoraCIExtension.xcframework/ios-arm64_armv7/AgoraCIExtension.framework/AgoraCIExtension",
+    "Pods/AgoraIrisRTC_iOS/AgoraCore.xcframework/ios-arm64_armv7/AgoraCore.framework/AgoraCore",
+    "Pods/AgoraIrisRTC_iOS/AgoraDav1dExtension.xcframework/ios-arm64_armv7/AgoraDav1dExtension.framework/AgoraDav1dExtension",
+    "Pods/AgoraIrisRTC_iOS/AgoraFDExtension.xcframework/ios-arm64_armv7/AgoraFDExtension.framework/AgoraFDExtension",
+    "Pods/AgoraIrisRTC_iOS/AgoraFullAudioFormatExtension.xcframework/ios-arm64_armv7/AgoraFullAudioFormatExtension.framework/AgoraFullAudioFormatExtension",
+    "Pods/AgoraIrisRTC_iOS/AgoraJNDExtension.xcframework/ios-arm64_armv7/AgoraJNDExtension.framework/AgoraJNDExtension",
+    "Pods/AgoraIrisRTC_iOS/AgoraReplayKitExtension.xcframework/ios-arm64_armv7/AgoraReplayKitExtension.framework/AgoraReplayKitExtension",
+    "Pods/AgoraIrisRTC_iOS/AgoraRtcKit.xcframework/ios-arm64_armv7/AgoraRtcKit.framework/AgoraRtcKit",
+    "Pods/AgoraIrisRTC_iOS/AgoraRtcWrapper.xcframework/ios-arm64_armv7/AgoraRtcWrapper.framework/AgoraRtcWrapper",
+    "Pods/AgoraIrisRTC_iOS/AgoraSoundTouch.xcframework/ios-arm64_armv7/AgoraSoundTouch.framework/AgoraSoundTouch",
+    "Pods/AgoraIrisRTC_iOS/AgoraSuperResolutionExtension.xcframework/ios-arm64_armv7/AgoraSuperResolutionExtension.framework/AgoraSuperResolutionExtension",
+    "Pods/AgoraIrisRTC_iOS/AgoraVideoProcessExtension.xcframework/ios-arm64_armv7/AgoraVideoProcessExtension.framework/AgoraVideoProcessExtension",
+    "Pods/AgoraIrisRTC_iOS/AgoraVideoSegmentationExtension.xcframework/ios-arm64_armv7/AgoraVideoSegmentationExtension.framework/AgoraVideoSegmentationExtension",
+    "Pods/AgoraIrisRTC_iOS/Agorafdkaac.xcframework/ios-arm64_armv7/Agorafdkaac.framework/Agorafdkaac",
+    "Pods/AgoraIrisRTC_iOS/Agoraffmpeg.xcframework/ios-arm64_armv7/Agoraffmpeg.framework/Agoraffmpeg",
+  ]
+
+  framework_paths.each do |framework_relative_path|
+    strip_bitcode_from_framework(bitcode_strip_path, framework_relative_path)
+  end
+
+  def set_version_string(plist_path, version)
+    result = system("/usr/libexec/PlistBuddy -c 'Set :CFBundleShortVersionString #{version}' #{plist_path}")
+    unless result
+      puts "Failed to set CFBundleShortVersionString in #{plist_path}"
+    end
+    result
+  end
+
+  installer.pods_project.targets.each do |target|
+    if target.name == 'AgoraIrisRTC_iOS'
+      puts "Found AgoraIrisRTC_iOS, searching for AgoraRtcWrapper Info.plist..."
+
+      plist_paths = [
+        "./Pods/AgoraIrisRTC_iOS/AgoraRtcWrapper.xcframework/ios-arm64_x86_64-simulator/AgoraRtcWrapper.framework/Info.plist",
+        "./Pods/AgoraIrisRTC_iOS/AgoraRtcWrapper.xcframework/ios-arm64_x86_64-simulator/dSYMs/AgoraRtcWrapper.framework.dSYM/Contents/Info.plist",
+        "./Pods/AgoraIrisRTC_iOS/AgoraRtcWrapper.xcframework/Info.plist",
+        "./Pods/AgoraIrisRTC_iOS/AgoraRtcWrapper.xcframework/ios-arm64_armv7/AgoraRtcWrapper.framework/Info.plist",
+        "./Pods/AgoraIrisRTC_iOS/AgoraRtcWrapper.xcframework/ios-arm64_armv7/dSYMs/AgoraRtcWrapper.framework.dSYM/Contents/Info.plist",
+      ]
+
+      plist_paths.each do |plist_path|
+        if File.exist?(plist_path)
+          puts "Found Info.plist at: #{plist_path}"
+
+          # Attempt to set CFBundleShortVersionString directly
+          if set_version_string(plist_path, '3.6.2')
+            puts "Successfully updated CFBundleShortVersionString to 3.6.2 in #{plist_path}"
+          end
+        else
+          puts "Info.plist not found at #{plist_path}"
+        end
+      end
+    end
+  end
+
+  installer.pods_project.targets.each do |target|
+    flutter_additional_ios_build_settings(target)
+  end
+end

@@ -1,0 +1,108 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    // NOTE: Temporarily disabled until you provide DNA63 Firebase config (google-services.json)
+    // id "com.google.gms.google-services"
+    // id "com.google.firebase.crashlytics"
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+def billing_version = "7.0.0"
+
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    compileSdkVersion 36
+    ndkVersion "27.0.12077973"
+    namespace "com.dna63.app"
+    java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+
+    kotlinOptions {
+        jvmTarget = '21'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        applicationId "com.dna63.app"
+        minSdkVersion 24
+        targetSdkVersion 35
+        versionCode 67
+        versionName '9.1.8'
+        multiDexEnabled true
+        ndk {
+            abiFilters 'arm64-v8a'  // Single ABI to reduce memory usage during build
+        }
+    }
+
+    signingConfigs {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+                storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+                storePassword keystoreProperties['storePassword']
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+        release {
+            if (keystorePropertiesFile.exists()) {
+                signingConfig signingConfigs.release
+            }
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+}
+
+
+
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.browser:browser:1.5.0'
+        force 'androidx.core:core-ktx:1.6.0'
+        force 'androidx.appcompat:appcompat:1.6.1'
+    }
+}
+
+dependencies {
+    implementation "com.android.billingclient:billing:$billing_version"
+    implementation 'com.google.android.gms:play-services-wallet:19.3.0'
+    // Firebase deps kept (compile-time). Runtime setup needs correct google-services.json.
+    implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-messaging")
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.android.material:material:1.5.0'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
+}
