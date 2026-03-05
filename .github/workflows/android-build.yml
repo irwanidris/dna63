@@ -28,15 +28,6 @@ jobs:
           channel: 'stable'
           cache: true
 
-      - name: Fix Android local.properties
-        run: |
-          # Remove local VPS paths - Flutter action will set correct paths
-          rm -f android/local.properties
-          echo "flutter.sdk=$FLUTTER_ROOT" > android/local.properties
-          echo "sdk.dir=$ANDROID_SDK_ROOT" >> android/local.properties
-          echo "=== Fixed local.properties ==="
-          cat android/local.properties
-
       - name: Cache pub dependencies
         uses: actions/cache@v4
         with:
@@ -69,22 +60,13 @@ jobs:
         run: |
           flutter build appbundle \
             --release \
-            --target-platform android-arm64 \
-            --obfuscate \
-            --split-debug-info=symbols/
+            --target-platform android-arm64
 
       - name: Upload AAB artifact
         uses: actions/upload-artifact@v4
         with:
           name: dna63-release-aab
           path: build/app/outputs/bundle/release/*.aab
-          retention-days: 30
-
-      - name: Upload debug symbols
-        uses: actions/upload-artifact@v4
-        with:
-          name: dna63-debug-symbols
-          path: symbols/
           retention-days: 30
 
       - name: Show build output
