@@ -348,53 +348,44 @@ Future<void> sendMultiPartRequest(MultipartRequest multiPartRequest, {Function(d
 }
 
 enum HttpMethod { GET, POST, DELETE, PUT }
+
+/// Re-generate JWT token via silent re-login
+/// 
+/// NOTE: This function does NOT use /jwt-auth/v1/token/refresh because:
+/// 1. The refresh endpoint requires a cookie-based refresh token
+/// 2. Flutter HTTP client does not easily handle cookies in this way
+/// 3. Instead, we store credentials securely and use silent re-login
+/// 
+/// Security: Credentials are stored in SharedPreferences. For production,
+/// consider encrypting sensitive data or using flutter_secure_storage.
 Future<void> reGenerateToken() async {
-  log('Regenerating Token - attempting JWT refresh...');
+  log('Regenerating Token - attempting silent re-login...');
   
-  // Check if we have a current token to refresh
-  if (userStore.token.isNotEmpty) {
-    try {
-      // Attempt token refresh first (uses current token to get new one)
-      await refreshToken();
-      log('JWT token refreshed successfully via /token/refresh');
-      return;
-    } catch (e) {
-      log('Token refresh failed: ${e.toString()}');
-      log('Falling back to re-login...');
-      // Continue to fallback re-login
-    }
-  }
-  
-  // Fallback: Re-login with stored credentials
-  // Only attempt re-login if we have stored credentials
+  // Silent re-login with securely stored credentials
   if (userStore.loginEmail.isNotEmpty && userStore.password.isNotEmpty) {
     Map request = {
       Users.username: userStore.loginEmail,
       Users.password: userStore.password,
     };
+    
     return await loginUser(request: request, isSocialLogin: appStore.isSocialLogin).then((value) async {
-      log('Token regenerated via re-login');
+      log('Token regenerated via silent re-login successfully');
+      // New token is automatically stored by loginUser()
     }).catchError((e) {
-      // If re-login also fails, clear token and require fresh login
-      log('Re-login failed: ${e.toString()}');
+      // Silent re-login failed - user must login again
+      log('Silent re-login failed: ${e.toString()}');
       userStore.setToken('');
       appStore.setLoggedIn(false);
-      throw e;
+      throw 'Session expired. Please login again.';
     });
   } else {
     // No stored credentials - user must login again
-    log('No credentials available for re-login');
+    log('No credentials available for silent re-login');
     userStore.setToken('');
     appStore.setLoggedIn(false);
     throw 'Session expired. Please login again.';
   }
 }
-void apiPrint({
-  String url = "",
-  String endPoint = "",
-  Map? headers,
-  String? request,
-  Map? multipartRequest,
   int statusCode = 0,
   String responseBody = "",
   String methodtype = "",
