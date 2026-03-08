@@ -271,7 +271,7 @@ class _BillingAddressComponentState extends State<BillingAddressComponent> {
                     child: Text(value.name.validate(), style: primaryTextStyle(), overflow: TextOverflow.ellipsis, maxLines: 1),
                   );
                 }).toList(),
-                initialValue: billingAddressVars.selectedCountry,
+                value: billingAddressVars.selectedCountry,
               );
             }),
             16.height,
