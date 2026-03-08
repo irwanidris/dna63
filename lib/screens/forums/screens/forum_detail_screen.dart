@@ -5,7 +5,7 @@ import 'package:socialv/main.dart';
 import 'package:socialv/network/rest_apis.dart';
 import 'package:socialv/screens/forums/components/forum_detail_component.dart';
 import 'package:socialv/screens/forums/screens/create_topic_screen.dart';
-import 'package:socialv/screens/groups/screens/group_detail_screen.dart';
+// TEMP DISABLED: import 'package:socialv/screens/groups/screens/group_detail_screen.dart';
 import 'package:socialv/screens/membership/screens/membership_plans_screen.dart';
 import 'package:socialv/store/profile_menu_store.dart';
 import 'package:socialv/utils/app_constants.dart';

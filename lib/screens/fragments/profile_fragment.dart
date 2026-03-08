@@ -9,7 +9,7 @@ import 'package:socialv/main.dart';
 import 'package:socialv/models/posts/post_model.dart';
 import 'package:socialv/network/rest_apis.dart';
 import 'package:socialv/screens/gamipress/screens/rewards_screen.dart';
-import 'package:socialv/screens/groups/screens/group_screen.dart';
+// TEMP DISABLED: import 'package:socialv/screens/groups/screens/group_screen.dart';
 import 'package:socialv/screens/membership/screens/membership_plans_screen.dart';
 import 'package:socialv/screens/post/components/post_component.dart';
 import 'package:socialv/screens/profile/components/profile_header_component.dart';

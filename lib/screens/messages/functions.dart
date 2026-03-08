@@ -12,7 +12,7 @@ import 'package:socialv/models/messages/fast_message_model.dart';
 import 'package:socialv/models/messages/stream_message.dart';
 import 'package:socialv/models/messages/unread_threads.dart';
 import 'package:socialv/screens/messages/calls/pickup_screen.dart';
-import 'package:socialv/screens/messages/components/recent_message_component.dart';
+// TEMP DISABLED: import 'package:socialv/screens/messages/components/recent_message_component.dart';
 import 'package:socialv/utils/app_constants.dart';
 
 void handleSocketEvents(BuildContext context, String message) {

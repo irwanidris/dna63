@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/main.dart';
 import 'package:socialv/models/calls/call_model.dart';
-import 'package:socialv/screens/messages/screens/message_screen.dart';
+// TEMP DISABLED: import 'package:socialv/screens/messages/screens/message_screen.dart';
 import 'package:socialv/utils/app_constants.dart';
 import 'package:socialv/utils/cached_network_image.dart';
 

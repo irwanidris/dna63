@@ -11,14 +11,14 @@ import 'package:socialv/screens/fragments/profile_fragment.dart';
 import 'package:socialv/screens/fragments/search_fragment.dart';
 import 'package:socialv/screens/home/components/user_detail_bottomsheet_widget.dart';
 import 'package:socialv/screens/membership/screens/membership_plans_screen.dart';
-import 'package:socialv/screens/messages/functions.dart';
+// TEMP DISABLED: import 'package:socialv/screens/messages/functions.dart';
 import 'package:socialv/screens/notification/components/latest_activity_component.dart';
 import 'package:socialv/screens/post/screens/add_post_screen.dart';
 import 'package:socialv/screens/shop/screens/shop_screen.dart';
 import 'package:socialv/utils/app_constants.dart';
 import 'package:socialv/utils/cached_network_image.dart';
 
-import 'messages/screens/message_screen.dart';
+// TEMP DISABLED: import 'messages/screens/message_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   final int? index;

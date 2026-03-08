@@ -10,9 +10,9 @@ import 'package:socialv/screens/gamipress/screens/rank_list_screen.dart';
 import 'package:socialv/screens/lms/screens/course_list_screen.dart';
 import 'package:socialv/screens/membership/screens/membership_plans_screen.dart';
 import 'package:socialv/screens/membership/screens/my_membership_screen.dart';
-import 'package:socialv/screens/messages/components/friends_tab_component.dart';
-import 'package:socialv/screens/messages/components/group_tab_component.dart';
-import 'package:socialv/screens/messages/components/messages_tab_component.dart';
+// TEMP DISABLED: import 'package:socialv/screens/messages/components/friends_tab_component.dart';
+// TEMP DISABLED: import 'package:socialv/screens/messages/components/group_tab_component.dart';
+// TEMP DISABLED: import 'package:socialv/screens/messages/components/messages_tab_component.dart';
 import 'package:socialv/screens/profile/screens/profile_friends_screen.dart';
 import 'package:socialv/screens/settings/screens/settings_screen.dart';
 import 'package:socialv/screens/shop/screens/cart_screen.dart';
@@ -21,7 +21,7 @@ import 'package:socialv/screens/shop/screens/shop_screen.dart';
 import 'package:socialv/screens/shop/screens/wishlist_screen.dart';
 import 'package:socialv/screens/stories/screen/highlight_story_screen.dart';
 
-import '../screens/groups/screens/group_screen.dart';
+// TEMP DISABLED: import '../screens/groups/screens/group_screen.dart';
 import '../screens/lms/screens/cource_orders_screen.dart';
 import '../utils/app_constants.dart';
 

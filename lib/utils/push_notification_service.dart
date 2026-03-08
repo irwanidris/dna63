@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/main.dart';
-import 'package:socialv/screens/messages/screens/chat_screen.dart';
+// TEMP DISABLED: import 'package:socialv/screens/messages/screens/chat_screen.dart';
 import 'package:socialv/utils/app_constants.dart';
 
-import '../screens/groups/screens/group_detail_screen.dart';
+// TEMP DISABLED: import '../screens/groups/screens/group_detail_screen.dart';
 import '../screens/membership/screens/membership_plans_screen.dart';
 import '../screens/post/screens/comment_screen.dart';
 import '../screens/post/screens/single_post_screen.dart';

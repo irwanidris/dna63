@@ -10,7 +10,7 @@ import 'package:socialv/models/forums/forum_model.dart';
 import 'package:socialv/network/rest_apis.dart';
 import 'package:socialv/screens/forums/components/forums_card_component.dart';
 import 'package:socialv/screens/forums/screens/forum_detail_screen.dart';
-import 'package:socialv/screens/groups/screens/group_detail_screen.dart';
+// TEMP DISABLED: import 'package:socialv/screens/groups/screens/group_detail_screen.dart';
 import 'package:socialv/screens/membership/screens/membership_plans_screen.dart';
 import 'package:socialv/store/fragment_store/forums_fragment_store.dart';
 
