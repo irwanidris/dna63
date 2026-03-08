@@ -143,6 +143,49 @@ Future<NonceModel> getNonce() async {
   return NonceModel.fromJson(await handleResponse(await buildHttpResponse('${APIEndPoint.storeNonce}', passParameters: true)));
 }
 
+/// Refresh JWT token using current valid token
+/// Returns new token or throws exception if refresh fails
+Future<String> refreshToken() async {
+  log('Attempting to refresh JWT token...');
+  try {
+    // Call JWT refresh endpoint with current token
+    // The current Bearer token is sent automatically via passToken: true
+    Response response = await buildHttpResponse(
+      APIEndPoint.refreshToken,
+      method: HttpMethod.POST,
+      passToken: true,
+      passParameters: false,
+    );
+    
+    if (response.statusCode == 200) {
+      var data = jsonDecode(response.body);
+      if (data['data'] != null && data['data']['token'] != null) {
+        String newToken = data['data']['token'];
+        log('JWT token refreshed successfully');
+        
+        // Store new token
+        await userStore.setToken(newToken);
+        return newToken;
+      } else if (data['token'] != null) {
+        // Alternative response structure
+        String newToken = data['token'];
+        log('JWT token refreshed successfully');
+        
+        // Store new token
+        await userStore.setToken(newToken);
+        return newToken;
+      } else {
+        throw 'Invalid refresh response: token not found';
+      }
+    } else {
+      throw 'Token refresh failed: ${response.statusCode}';
+    }
+  } catch (e) {
+    log('Token refresh error: ${e.toString()}');
+    throw e;
+  }
+}
+
 Future<CommonMessageResponse> forgetPassword({required String email}) async {
   Map request = {"email": email};
 

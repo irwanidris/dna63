@@ -348,22 +348,47 @@ Future<void> sendMultiPartRequest(MultipartRequest multiPartRequest, {Function(d
 }
 
 enum HttpMethod { GET, POST, DELETE, PUT }
-
 Future<void> reGenerateToken() async {
-  log('Regenerating Token');
-
-  Map request = {
-    Users.username: userStore.loginEmail,
-    Users.password: userStore.password,
-  };
-
-  return await loginUser(request: request, isSocialLogin: appStore.isSocialLogin).then((value) async {
-    //
-  }).catchError((e) {
-    throw e;
-  });
+  log('Regenerating Token - attempting JWT refresh...');
+  
+  // Check if we have a current token to refresh
+  if (userStore.token.isNotEmpty) {
+    try {
+      // Attempt token refresh first (uses current token to get new one)
+      await refreshToken();
+      log('JWT token refreshed successfully via /token/refresh');
+      return;
+    } catch (e) {
+      log('Token refresh failed: ${e.toString()}');
+      log('Falling back to re-login...');
+      // Continue to fallback re-login
+    }
+  }
+  
+  // Fallback: Re-login with stored credentials
+  // Only attempt re-login if we have stored credentials
+  if (userStore.loginEmail.isNotEmpty && userStore.password.isNotEmpty) {
+    Map request = {
+      Users.username: userStore.loginEmail,
+      Users.password: userStore.password,
+    };
+    return await loginUser(request: request, isSocialLogin: appStore.isSocialLogin).then((value) async {
+      log('Token regenerated via re-login');
+    }).catchError((e) {
+      // If re-login also fails, clear token and require fresh login
+      log('Re-login failed: ${e.toString()}');
+      userStore.setToken('');
+      appStore.setLoggedIn(false);
+      throw e;
+    });
+  } else {
+    // No stored credentials - user must login again
+    log('No credentials available for re-login');
+    userStore.setToken('');
+    appStore.setLoggedIn(false);
+    throw 'Session expired. Please login again.';
+  }
 }
-
 void apiPrint({
   String url = "",
   String endPoint = "",

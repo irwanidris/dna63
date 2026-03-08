@@ -233,6 +233,7 @@ const LOGIN_TYPE_APPLE = 'apple';
 
 class APIEndPoint {
   static const login = 'jwt-auth/v1/token';
+static const refreshToken = 'jwt-auth/v1/token/refresh';
   static const getMembers = 'buddypress/v1/members';
   static const coverImage = 'cover';
   static const avatarImage = 'avatar';
