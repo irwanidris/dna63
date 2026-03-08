@@ -284,7 +284,7 @@ class _BillingAddressComponentState extends State<BillingAddressComponent> {
                         fillColor: context.scaffoldBackgroundColor,
                       ),
                       style: primaryTextStyle(),
-                      initialValue: billingAddressVars.selectedState,
+                      value: billingAddressVars.selectedState,
                       borderRadius: BorderRadius.circular(commonRadius),
                       icon: Icon(Icons.arrow_drop_down, color: appStore.isDarkMode ? bodyDark : bodyWhite),
                       elevation: 8,
