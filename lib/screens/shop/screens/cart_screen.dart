@@ -14,7 +14,7 @@ import 'package:socialv/screens/shop/components/cart_coupons_component.dart';
 import 'package:socialv/screens/shop/components/empty_cart_component.dart';
 import 'package:socialv/screens/shop/components/price_widget.dart';
 import 'package:socialv/screens/shop/components/product_card_component.dart';
-import 'package:socialv/screens/shop/screens/checkout_screen.dart';
+// TEMP DISABLED: import 'package:socialv/screens/shop/screens/checkout_screen.dart';
 import 'package:socialv/screens/shop/screens/coupon_list_screen.dart';
 import 'package:socialv/screens/shop/screens/product_detail_screen.dart';
 import 'package:socialv/screens/shop/screens/wishlist_screen.dart';
@@ -564,11 +564,11 @@ class _CartScreenState extends State<CartScreen> {
                                           });
                                         }
                                       }).then((value) {
-                                        CheckoutScreen(cartDetails: cartScreenVars.cart!).launch(context).then((value) async {
-                                          if (value ?? false) {
-                                            await getCart(showLoader: true);
-                                          }
-                                        });
+        toast('Checkout temporarily disabled');
+        return;  // Skip checkout
+        // await getCart(showLoader: true);
+        // }
+        });
                                       });
                                     });
                                 },

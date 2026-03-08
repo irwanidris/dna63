@@ -10,7 +10,7 @@ import 'package:socialv/main.dart';
 import 'package:socialv/models/pmp_models/membership_model.dart';
 import 'package:socialv/network/pmp_repositry.dart';
 import 'package:socialv/screens/membership/components/plan_subtitle_component.dart';
-import 'package:socialv/screens/membership/screens/pmp_checkout_screen.dart';
+// TEMP DISABLED: // TEMP DISABLED: import 'package:socialv/screens/membership/screens/pmp_checkout_screen.dart';
 import 'package:socialv/services/in_app_purchase_service.dart';
 import 'package:socialv/store/profile_menu_store.dart';
 import 'package:socialv/utils/app_constants.dart';
@@ -255,7 +255,10 @@ class _MembershipPlansScreenState extends State<MembershipPlansScreen> {
                                           });
                                         }
                                       } else {
-                                        if (widget.selectedPlanId != plan.id) PmpCheckoutScreen(selectedPlan: plan).launch(context);
+                                        if (widget.selectedPlanId != plan.id) {
+      // TEMP DISABLED: toast('Checkout temporarily disabled');  // TEMP DISABLED
+      toast('Checkout temporarily disabled for testing');
+    }
                                       }
                                     },
                             ).paddingAll(16)

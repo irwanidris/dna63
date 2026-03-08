@@ -13,7 +13,7 @@ import 'package:socialv/screens/membership/components/past_invoices_component.da
 import 'package:socialv/screens/membership/components/plan_subtitle_component.dart';
 import 'package:socialv/screens/membership/screens/cancel_membership_screen.dart';
 import 'package:socialv/screens/membership/screens/membership_plans_screen.dart';
-import 'package:socialv/screens/membership/screens/pmp_checkout_screen.dart';
+// TEMP DISABLED: import 'package:socialv/screens/membership/screens/pmp_checkout_screen.dart';
 import 'package:socialv/services/in_app_purchase_service.dart';
 import 'package:socialv/store/profile_menu_store.dart';
 import 'package:socialv/utils/cached_network_image.dart';
@@ -220,7 +220,7 @@ class _MyMembershipScreenState extends State<MyMembershipScreen> {
                                         height: 30,
                                         context: context,
                                         onTap: () {
-                                          PmpCheckoutScreen(selectedPlan: myMembershipScreenVars.membership!).launch(context);
+                                          toast('Checkout temporarily disabled');  // TEMP DISABLED
                                         },
                                         color: appColorPrimary,
                                         text: language.renew,
