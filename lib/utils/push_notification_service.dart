@@ -75,7 +75,7 @@ class PushNotificationService {
               navigatorKey.currentState!.push(MaterialPageRoute(builder: (context) => MemberProfileScreen(memberId: element.value)));
             } else if (element.key == FirebaseMsgConst.groupIdKey) {
               if (pmpStore.viewSingleGroup) {
-                navigatorKey.currentState!.push(MaterialPageRoute(builder: (context) => GroupDetailScreen(groupId: element.value)));
+                navigatorKey.currentState!.push(MaterialPageRoute(builder: (context) => // TEMP: GroupDetailScreen(groupId: element.value)));
               } else {
                 navigatorKey.currentState!.push(MaterialPageRoute(builder: (context) => MembershipPlansScreen()));
               }
@@ -83,7 +83,7 @@ class PushNotificationService {
               if (pmpStore.privateMessaging) {
                 navigatorKey.currentState!.push(
                   MaterialPageRoute(
-                    builder: (context) => ChatScreen(
+                    builder: (context) => // TEMP: ChatScreen(
                       name: message.notification?.title ?? "",
                       isFromNotification: true,
                       threadId: element.value,
