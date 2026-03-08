@@ -32,10 +32,19 @@ Map<String, String> buildHeaderTokens({required bool requiredNonce, required boo
   return header;
 }
 
+/// WooCommerce Default Config - DNA63
+const String WOOCOMMERCE_BASE_URL = "https://dna63.com";
+const String WOOCOMMERCE_CONSUMER_KEY = "KXbX2YMMZbC8EPwiFSJtzxqg39247Etq5vyomySgAWz1XTaqdNvg2IfHnCtt47kB";
+// JRB Remote Site API uses single-token auth (no consumer secret required)
+
 /// for passing woo commerce parameters
 String _getOAuthURL(String requestMethod, String endpoint) {
   var consumerKey = getStringAsync(SharePreferencesKey.WOO_CONSUMER_KEY);
   var consumerSecret = getStringAsync(SharePreferencesKey.WOO_CONSUMER_SECRET);
+  
+  /// Fallback to default DNA63 WooCommerce credentials if not set
+  if (consumerKey.isEmpty) consumerKey = WOOCOMMERCE_CONSUMER_KEY;
+  if (consumerSecret.isEmpty) consumerSecret = ""; // Consumer secret not stored in app
   var tokenSecret = "";
   var url = BASE_URL + endpoint;
 

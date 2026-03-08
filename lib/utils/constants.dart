@@ -6,6 +6,10 @@ import 'package:socialv/main.dart';
 const APP_PACKAGE_NAME = "com.iconic.socialv";
 const WEB_SOCKET_URL = "wss://realtime-cloud.bpbettermessages.com/socket.io/?EIO=4&transport=websocket";
 
+/// WooCommerce Configuration
+const String WOOCOMMERCE_BASE_URL = "https://dna63.com";
+const String WOOCOMMERCE_CONSUMER_KEY = "ck_xxxxxxxxx";
+
 /// Radius
 double commonRadius = 8.0;
 
