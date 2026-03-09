@@ -15,6 +15,8 @@ import 'package:socialv/screens/messages/calls/pickup_screen.dart';
 // TEMP DISABLED: import 'package:socialv/screens/messages/components/recent_message_component.dart';
 import 'package:socialv/utils/app_constants.dart';
 
+int? threadOpened;
+
 void handleSocketEvents(BuildContext context, String message) {
   log('Message : $message');
   String? event = getEventKey(message);

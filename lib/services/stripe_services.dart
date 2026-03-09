@@ -13,9 +13,10 @@ import 'package:socialv/network/network_utils.dart';
 import 'package:socialv/network/pmp_repositry.dart';
 import 'package:socialv/network/rest_apis.dart';
 import 'package:socialv/screens/membership/screens/pmp_order_detail_screen.dart';
-import 'package:socialv/screens/shop/screens/order_detail_screen.dart';
+// MVP: Shop disabled - import 'package:socialv/screens/shop/screens/order_detail_screen.dart';
 
 import '../utils/app_constants.dart';
+import '../utils/stubs.dart';
 
 class StripeServices {
   num totalAmount = 0;
