@@ -47,8 +47,8 @@ const mAdMobBannerIdIOS = 'Please put your AdMob Banner ID here';
 const mTestAdMobBannerId = 'Please put your AdMob Test Banner ID here';
 
 /// STRIPE PAYMENT DETAIL
-const STRIPE_MERCHANT_COUNTRY_CODE = 'IN';
-const STRIPE_CURRENCY_CODE = 'INR';
+const STRIPE_MERCHANT_COUNTRY_CODE = 'MY';
+const STRIPE_CURRENCY_CODE = 'MYR';
 const STRIPE_TEST_PAYMENT_KEY = 'Please put your Stripe Secret Key here';
 const STRIPE_TEST_PUBLISHABLE_KEY = 'pk_live_51I7IGpEvM09srKs7hW5T6yn2LltGHiCQ3QijHrYQB9IU08LantClVluFy8GLi1PjPMoW1KBo5BKeMJU8kVu02vn800koF8OQqm';
 
@@ -65,17 +65,17 @@ const DEEPLINK_KEY = "/dna63/";
 // Add the Unique key from the shared URL
 Country defaultCountry() {
   return Country(
-    phoneCode: '91',
-    countryCode: 'IN',
-    e164Sc: 91,
+    phoneCode: '60',
+    countryCode: 'MY',
+    e164Sc: 60,
     geographic: true,
     level: 1,
-    name: 'India',
-    example: '9123456789',
-    displayName: 'India (IN) [+91]',
-    displayNameNoCountryCode: 'India (IN)',
-    e164Key: '91-IN-0',
-    fullExampleWithPlusSign: '+919123456789',
+    name: 'Malaysia',
+    example: '123456789',
+    displayName: 'Malaysia (MY) [+60]',
+    displayNameNoCountryCode: 'Malaysia (MY)',
+    e164Key: '60-MY-0',
+    fullExampleWithPlusSign: '+60123456789',
   );
 }
 // endregion
