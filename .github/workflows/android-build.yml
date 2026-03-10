@@ -32,19 +32,31 @@ jobs:
       - name: Get dependencies
         run: flutter pub get
 
-      - name: Build Debug APK
+      - name: Build Debug APK with verbose logging
         run: |
           set -o pipefail
-          flutter build apk --debug 2>&1 | tee build-log.txt
-          echo ""
-          echo "=== CHECKING BUILD OUTPUTS ==="
-          ls -lh build/app/outputs/flutter-apk/ || echo "flutter-apk folder not found"
-          find build -name "*.apk" -type f 2>/dev/null | head -10 || echo "No APK files found anywhere"
+          flutter build apk --debug -v 2>&1 | tee full-build-log.txt
 
-      - name: Upload build log
+      - name: Find APK/AAB files
+        if: always()
+        run: |
+          echo "=== FIND APK/AAB FILES ==="
+          find . -type f \( -name "*.apk" -o -name "*.aab" \) | sort || true
+          echo ""
+          echo "=== LIST BUILD OUTPUTS ==="
+          ls -la build/app/outputs/ 2>/dev/null || echo "No outputs directory"
+          echo ""
+          echo "=== LAST 200 LINES OF BUILD LOG ==="
+          tail -n 200 full-build-log.txt || true
+
+      - name: Upload build artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: build-log
-          path: build-log.txt
+          name: build-artifacts
+          path: |
+            full-build-log.txt
+            build/app/outputs/**/*.apk
+            build/app/outputs/**/*.aab
           retention-days: 7
+          if-no-files-found: warn
