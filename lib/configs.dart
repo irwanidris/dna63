@@ -4,7 +4,7 @@ import 'package:country_picker/country_picker.dart';
 const APP_NAME = "DNA63";
 
 /// App Icon src
-const APP_ICON = "assets/app_icon.png";
+const APP_ICON = "assets/images/app_icon.jpg";
 
 /// Splash screen image src
 const SPLASH_SCREEN_IMAGE = 'assets/images/splash_image.png';
