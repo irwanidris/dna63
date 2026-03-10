@@ -29,38 +29,22 @@ jobs:
           channel: 'stable'
           cache: false
 
-      - name: Diagnostic
-        run: |
-          echo "=== Flutter Version ==="
-          flutter --version
-          dart --version
-
-      - name: Clean
-        run: flutter clean
-
       - name: Get dependencies
         run: flutter pub get
 
       - name: Build Debug APK
         run: |
-          flutter build apk --debug -v 2>&1 | tee build-log.txt
-          echo "Build completed, checking outputs..."
-          ls -lh build/app/outputs/flutter-apk/ || echo "APK folder not found"
-          find build -name "*.apk" -type f -exec ls -lh {} \; || echo "No APK files found"
+          set -o pipefail
+          flutter build apk --debug 2>&1 | tee build-log.txt
+          echo ""
+          echo "=== CHECKING BUILD OUTPUTS ==="
+          ls -lh build/app/outputs/flutter-apk/ || echo "flutter-apk folder not found"
+          find build -name "*.apk" -type f 2>/dev/null | head -10 || echo "No APK files found anywhere"
 
-      - name: Upload APK artifact
-        if: success()
+      - name: Upload build log
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: dna63-debug-apk
-          path: build/app/outputs/flutter-apk/app-debug.apk
-          retention-days: 7
-          if-no-files-found: error
-
-      - name: Upload build log (on failure)
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-failure-log
+          name: build-log
           path: build-log.txt
           retention-days: 7
