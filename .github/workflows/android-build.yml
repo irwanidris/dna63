@@ -10,10 +10,13 @@ on:
 jobs:
   build-android:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -26,20 +29,31 @@ jobs:
         with:
           flutter-version: '3.27.0'
           channel: 'stable'
-          cache: true
+          cache: false
 
-      - name: Clean and prepare
+      - name: Pre-build checks
         run: |
-          flutter clean || true
-          rm -rf build/
-          rm -rf android/.gradle/
-          rm -rf ~/.gradle/caches/
+          flutter doctor -v
+          echo "=== Pubspec Check ==="
+          head -30 pubspec.yaml
 
-      - name: Get dependencies
-        run: flutter pub get
+      - name: Clean
+        run: flutter clean
+
+      - name: Get dependencies (with retry)
+        run: |
+          flutter pub get || (sleep 10 && flutter pub get)
+        timeout-minutes: 15
+
+      - name: Analyze code
+        run: flutter analyze --no-fatal-infos
+        continue-on-error: true
 
       - name: Build Debug APK
         run: flutter build apk --debug
+        timeout-minutes: 25
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.daemon=false -Xmx4g"
 
       - name: Upload APK artifact
         if: always()
@@ -49,7 +63,9 @@ jobs:
           path: build/app/outputs/flutter-apk/*.apk
           retention-days: 7
 
-      - name: List build outputs
+      - name: Show build outputs
+        if: always()
         run: |
-          find build/app/outputs -type f 2>/dev/null || echo "No outputs"
+          echo "=== Build Directory ==="
+          ls -la build/app/outputs/ 2>/dev/null || echo "No outputs folder"
           ls -la build/app/outputs/flutter-apk/ 2>/dev/null || echo "No APK folder"
