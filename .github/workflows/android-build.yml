@@ -29,18 +29,11 @@ jobs:
           channel: 'stable'
           cache: false
 
-      - name: Diagnostic - Flutter version
+      - name: Diagnostic
         run: |
           echo "=== Flutter Version ==="
           flutter --version
-          echo ""
-          echo "=== Dart Version ==="
           dart --version
-
-      - name: Diagnostic - Pubspec check
-        run: |
-          echo "=== Pubspec.yaml (first 50 lines) ==="
-          head -50 pubspec.yaml
 
       - name: Clean
         run: flutter clean
@@ -48,29 +41,26 @@ jobs:
       - name: Get dependencies
         run: flutter pub get
 
-      - name: Build Debug APK with verbose logging
-        run: flutter build apk --debug -v 2>&1 | tee build-log.txt
-        timeout-minutes: 40
+      - name: Build Debug APK
+        run: |
+          flutter build apk --debug -v 2>&1 | tee build-log.txt
+          echo "Build completed, checking outputs..."
+          ls -lh build/app/outputs/flutter-apk/ || echo "APK folder not found"
+          find build -name "*.apk" -type f -exec ls -lh {} \; || echo "No APK files found"
 
-      - name: Upload APK artifact (if exists)
-        if: always()
+      - name: Upload APK artifact
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: dna63-debug-apk
-          path: |
-            build/app/outputs/flutter-apk/*.apk
-            build-log.txt
+          path: build/app/outputs/flutter-apk/app-debug.apk
           retention-days: 7
-          if-no-files-found: warn
+          if-no-files-found: error
 
-      - name: Final diagnostics
-        if: always()
-        run: |
-          echo "=== Build directory structure ==="
-          find build -maxdepth 4 -type f 2>/dev/null | sort || echo "No build directory"
-          echo ""
-          echo "=== Build log (last 200 lines) ==="
-          tail -n 200 build-log.txt 2>/dev/null || echo "No build-log.txt found"
-          echo ""
-          echo "=== Flutter APK output directory ==="
-          ls -la build/app/outputs/flutter-apk/ 2>/dev/null || echo "No APK output directory"
+      - name: Upload build log (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-failure-log
+          path: build-log.txt
+          retention-days: 7
