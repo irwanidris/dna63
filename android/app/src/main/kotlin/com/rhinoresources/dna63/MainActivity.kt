@@ -1,4 +1,4 @@
-package com.dna63.app
+package com.rhinoresources.dna63
 
 import androidx.annotation.NonNull
 import io.flutter.embedding.android.FlutterFragmentActivity

@@ -41,7 +41,7 @@
                 <data android:scheme="https" />
 
                 <!-- Include one or more domains that should be verified. -->
-                <data android:host="apps.iqonic.design" />
+                <data android:host="dna63.com" />
             </intent-filter>
 
             <meta-data

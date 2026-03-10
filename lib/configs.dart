@@ -1,7 +1,7 @@
 import 'package:country_picker/country_picker.dart';
 
 /// App Name
-const APP_NAME = "SocialV";
+const APP_NAME = "DNA63";
 
 /// App Icon src
 const APP_ICON = "assets/app_icon.png";
@@ -34,7 +34,7 @@ const TERMS_AND_CONDITIONS_URL = '$DOMAIN_URL/terms-condition/';
 const PRIVACY_POLICY_URL = '$DOMAIN_URL/privacy-policy-2/';
 
 /// Support URL
-const SUPPORT_URL = 'https://iqonic.desky.support';
+const SUPPORT_URL = 'https://rhinoresources.desky.support';
 
 /// AdMod Id
 // Android
@@ -50,7 +50,7 @@ const mTestAdMobBannerId = 'Please put your AdMob Test Banner ID here';
 const STRIPE_MERCHANT_COUNTRY_CODE = 'IN';
 const STRIPE_CURRENCY_CODE = 'INR';
 const STRIPE_TEST_PAYMENT_KEY = 'Please put your Stripe Secret Key here';
-const STRIPE_TEST_PUBLISHABLE_KEY = 'Please put your Stripe Publishable Key here';
+const STRIPE_TEST_PUBLISHABLE_KEY = 'pk_live_51I7IGpEvM09srKs7hW5T6yn2LltGHiCQ3QijHrYQB9IU08LantClVluFy8GLi1PjPMoW1KBo5BKeMJU8kVu02vn800koF8OQqm';
 
 /// RAZORPAY PAYMENT DETAIL
 const RAZORPAY_CURRENCY_CODE = 'INR';
@@ -60,7 +60,7 @@ const PAYPAL_CURRENCY_CODE = 'USD';
 const AGORA_APP_ID = 'Please put your Agora App ID here';
 
 ///deeplink key
-const DEEPLINK_KEY = "/socialv/";
+const DEEPLINK_KEY = "/dna63/";
 
 // Add the Unique key from the shared URL
 Country defaultCountry() {

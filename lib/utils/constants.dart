@@ -3,7 +3,7 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/main.dart';
 
 /// DO NOT CHANGE THIS Keys
-const APP_PACKAGE_NAME = "com.iconic.socialv";
+const APP_PACKAGE_NAME = "com.rhinoresources.dna63";
 const WEB_SOCKET_URL = "wss://realtime-cloud.bpbettermessages.com/socket.io/?EIO=4&transport=websocket";
 
 /// WooCommerce Configuration
