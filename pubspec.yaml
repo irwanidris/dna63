@@ -1,7 +1,6 @@
 name: socialv
 description: A new Flutter project.
 publish_to: 'none'
-
 version: 9.1.8
 
 environment:
@@ -20,17 +19,16 @@ dependencies:
   rating_summary: ^1.0.3+1
   url_launcher: ^6.3.1
 
-
   # Media
   image_picker: ^1.1.2
   file_picker: ^10.1.9
   just_audio: ^0.10.4
   syncfusion_flutter_pdfviewer: ^29.2.9
   photo_view: ^0.15.0
-  appinio_video_player:
-    git:
-      url: https://github.com/iqonic-design/appinio_video_player.git
-      ref: 1.1.2
+  # CI: Disabled Git dependency - appinio_video_player:
+  # CI: Disabled Git dependency   git:
+  # CI: Disabled Git dependency     url: https://github.com/iqonic-design/appinio_video_player.git
+  # CI: Disabled Git dependency     ref: 1.1.2
   giphy_get: ^3.6.1
   video_player: ^2.9.5
   youtube_player_flutter: ^9.1.1
@@ -40,7 +38,6 @@ dependencies:
   # APIs
   http: ^1.4.0
   html: ^0.15.6
-
   flutter_html: ^3.0.0-beta.1
   flutter_html_table: ^3.0.0-beta.2
   google_mobile_ads: ^6.0.0
@@ -68,7 +65,6 @@ dependencies:
   google_sign_in: ^6.3.0
   the_apple_sign_in: ^1.1.1
 
-
   # Story
   story_time: ^1.0.6
   numberpicker: ^2.1.2
@@ -85,15 +81,14 @@ dependencies:
   modal_progress_hud_nsn: ^0.5.1
   story_view: ^0.16.6
 
-
   #Payment
   flutter_stripe: ^11.5.0
   razorpay_flutter: ^1.4.0
   purchases_flutter: ^8.10.0
-  flutter_paypal_checkout:
-    git:
-      url: https://github.com/iqonic-design/flutter_paypal_checkout.git
-      ref: main
+  # CI: Disabled Git dependency - flutter_paypal_checkout:
+  # CI: Disabled Git dependency   git:
+  # CI: Disabled Git dependency     url: https://github.com/iqonic-design/flutter_paypal_checkout.git
+  # CI: Disabled Git dependency     ref: main
 
   # Agora
   agora_rtc_engine: ^6.5.2
@@ -107,8 +102,8 @@ dev_dependencies:
     sdk: flutter
   build_runner: ^2.4.15
   mobx_codegen: ^2.7.1
-  # dart run build_runner build --delete-conflicting-outputs
 
+  # dart run build_runner build --delete-conflicting-outputs
 dependency_overrides:
   intl: ^0.20.2
   csslib: ^1.0.2
@@ -117,11 +112,9 @@ dependency_overrides:
 
 flutter:
   uses-material-design: true
-
   assets:
     - assets/
     - assets/images/
     - assets/flag/
     - assets/icons/
     - assets/lottie/
-

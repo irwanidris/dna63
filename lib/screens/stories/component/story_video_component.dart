@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:appinio_video_player/appinio_video_player.dart';
+import 'package:socialv/utils/stubs.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/screens/stories/screen/story_page.dart';

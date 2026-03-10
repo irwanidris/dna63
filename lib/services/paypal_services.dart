@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_paypal_checkout/flutter_paypal_checkout.dart';
+import 'package:socialv/utils/stubs.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../configs.dart';
 import '../main.dart';

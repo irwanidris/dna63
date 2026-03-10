@@ -1,4 +1,4 @@
-import 'package:appinio_video_player/appinio_video_player.dart';
+import 'package:socialv/utils/stubs.dart';
 import 'package:flutter/material.dart';
 import 'package:giphy_get/giphy_get.dart';
 import 'package:mobx/mobx.dart';

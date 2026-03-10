@@ -127,3 +127,21 @@ class OrderDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Container();
 }
+
+/// APPINIO VIDEO PLAYER STUBS (CI: Git dependency disabled)
+class CachedVideoPlayerController {
+  CachedVideoPlayerController.network(String url);
+  CachedVideoPlayerController.file(dynamic file);
+  Future<void> initialize() async {}
+  void dispose() {}
+}
+
+class CustomVideoPlayerController {
+  CustomVideoPlayerController({required CachedVideoPlayerController videoPlayerController, required dynamic customVideoPlayerSettings});
+  void dispose() {}
+}
+
+/// PAYPAL CHECKOUT STUB (CI: Git dependency disabled)
+class FlutterPaypalCheckout {
+  static Future<void> execute(dynamic context, {required String clientId, required String secretKey, required dynamic checkoutInfo, required Function(dynamic) onSuccess, required Function(dynamic) onError, required Function(dynamic) onCancel}) async {}
+}

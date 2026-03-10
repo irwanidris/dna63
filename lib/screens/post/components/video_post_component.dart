@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:appinio_video_player/appinio_video_player.dart';
+import 'package:socialv/utils/stubs.dart';
 import 'package:socialv/store/fragment_store/home_fragment_store.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
