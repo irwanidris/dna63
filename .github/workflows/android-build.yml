@@ -22,7 +22,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Setup Flutter (matching local)
+      - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.29.2'
@@ -41,29 +41,36 @@ jobs:
         run: |
           echo "=== Pubspec.yaml (first 50 lines) ==="
           head -50 pubspec.yaml
-          echo ""
-          echo "=== Checking for Git dependencies ==="
-          grep -n "git:" pubspec.yaml || echo "No Git dependencies found"
 
       - name: Clean
         run: flutter clean
 
-      - name: Get dependencies (verbose)
-        run: flutter pub get -v
+      - name: Get dependencies
+        run: flutter pub get
 
-      - name: Build Debug APK
-        run: flutter build apk --debug
+      - name: Build Debug APK with verbose logging
+        run: flutter build apk --debug -v 2>&1 | tee build-log.txt
+        timeout-minutes: 40
 
-      - name: Upload APK artifact
+      - name: Upload APK artifact (if exists)
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: dna63-debug-apk
-          path: build/app/outputs/flutter-apk/*.apk
+          path: |
+            build/app/outputs/flutter-apk/*.apk
+            build-log.txt
           retention-days: 7
+          if-no-files-found: warn
 
-      - name: Show build outputs
+      - name: Final diagnostics
         if: always()
         run: |
-          echo "=== Build outputs ==="
-          find build/app/outputs -type f 2>/dev/null || echo "No outputs"
-          ls -la build/app/outputs/flutter-apk/ 2>/dev/null || echo "No APK folder"
+          echo "=== Build directory structure ==="
+          find build -maxdepth 4 -type f 2>/dev/null | sort || echo "No build directory"
+          echo ""
+          echo "=== Build log (last 200 lines) ==="
+          tail -n 200 build-log.txt 2>/dev/null || echo "No build-log.txt found"
+          echo ""
+          echo "=== Flutter APK output directory ==="
+          ls -la build/app/outputs/flutter-apk/ 2>/dev/null || echo "No APK output directory"
