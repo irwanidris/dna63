@@ -22,21 +22,34 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Setup Flutter (no cache)
+      - name: Setup Flutter (matching local)
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.27.0'
+          flutter-version: '3.29.2'
           channel: 'stable'
           cache: false
 
-      - name: Flutter doctor
-        run: flutter doctor -v
+      - name: Diagnostic - Flutter version
+        run: |
+          echo "=== Flutter Version ==="
+          flutter --version
+          echo ""
+          echo "=== Dart Version ==="
+          dart --version
+
+      - name: Diagnostic - Pubspec check
+        run: |
+          echo "=== Pubspec.yaml (first 50 lines) ==="
+          head -50 pubspec.yaml
+          echo ""
+          echo "=== Checking for Git dependencies ==="
+          grep -n "git:" pubspec.yaml || echo "No Git dependencies found"
 
       - name: Clean
         run: flutter clean
 
-      - name: Get dependencies
-        run: flutter pub get
+      - name: Get dependencies (verbose)
+        run: flutter pub get -v
 
       - name: Build Debug APK
         run: flutter build apk --debug
@@ -47,3 +60,10 @@ jobs:
           name: dna63-debug-apk
           path: build/app/outputs/flutter-apk/*.apk
           retention-days: 7
+
+      - name: Show build outputs
+        if: always()
+        run: |
+          echo "=== Build outputs ==="
+          find build/app/outputs -type f 2>/dev/null || echo "No outputs"
+          ls -la build/app/outputs/flutter-apk/ 2>/dev/null || echo "No APK folder"
