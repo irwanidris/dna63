@@ -34,7 +34,7 @@ const TERMS_AND_CONDITIONS_URL = '$DOMAIN_URL/terms-condition/';
 const PRIVACY_POLICY_URL = '$DOMAIN_URL/privacy-policy-2/';
 
 /// Support URL
-const SUPPORT_URL = 'https://rhinoresources.desky.support';
+const SUPPORT_URL = 'https://support.dna63.com';
 
 /// AdMod Id
 // Android

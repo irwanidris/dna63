@@ -462,7 +462,7 @@ class AppImages {
   static String profileBackgroundImage = "assets/images/background_image.png";
 
   // static String defaultAvatarUrl = "https://wordpress.iqonic.design/product/wp/socialv-app/wp-content/themes/socialv-theme/assets/images/redux/default-avatar.jpg";
-  static String defaultAvatarUrl = "https://apps.iqonic.design/socialv/wp-content/themes/socialv-themes/assets/images/redux/default-avatar.jpg";
+  static String defaultAvatarUrl = "https://apps.dna63.com/wp-content/themes/socialv-themes/assets/images/redux/default-avatar.jpg";
 }
 
 class Users {
