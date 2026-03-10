@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/main.dart';
-// TEMP DISABLED: import 'package:socialv/screens/messages/screens/chat_screen.dart';
+import 'package:socialv/screens/messages/screens/chat_screen.dart';
 import 'package:socialv/utils/app_constants.dart';
 
-// TEMP DISABLED: import '../screens/groups/screens/group_detail_screen.dart';
+import '../screens/groups/screens/group_detail_screen.dart';
 import '../screens/membership/screens/membership_plans_screen.dart';
 import '../screens/post/screens/comment_screen.dart';
 import '../screens/post/screens/single_post_screen.dart';
@@ -75,7 +75,7 @@ class PushNotificationService {
               navigatorKey.currentState!.push(MaterialPageRoute(builder: (context) => MemberProfileScreen(memberId: element.value)));
             } else if (element.key == FirebaseMsgConst.groupIdKey) {
               if (pmpStore.viewSingleGroup) {
-                navigatorKey.currentState!.push(MaterialPageRoute(builder: (context) => // TEMP: GroupDetailScreen(groupId: element.value)));
+                navigatorKey.currentState!.push(MaterialPageRoute(builder: (context) => GroupDetailScreen(groupId: element.value)));
               } else {
                 navigatorKey.currentState!.push(MaterialPageRoute(builder: (context) => MembershipPlansScreen()));
               }
@@ -83,7 +83,7 @@ class PushNotificationService {
               if (pmpStore.privateMessaging) {
                 navigatorKey.currentState!.push(
                   MaterialPageRoute(
-                    builder: (context) => // TEMP: ChatScreen(
+                    builder: (context) => ChatScreen(
                       name: message.notification?.title ?? "",
                       isFromNotification: true,
                       threadId: element.value,
