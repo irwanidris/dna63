@@ -135,6 +135,14 @@ jobs:
           org.gradle.jvmargs=-Xmx4G -XX:MaxMetaspaceSize=2G -XX:+HeapDumpOnOutOfMemoryError
           android.useAndroidX=true
           android.enableJetifier=true
+          org.gradle.java.home=${JAVA_HOME}
+          EOF
+
+      - name: Create local.properties
+        run: |
+          cat > android/local.properties << EOF
+          flutter.sdk=${FLUTTER_ROOT}
+          sdk.dir=/usr/local/lib/android/sdk
           EOF
 
       - name: Fix Project Build Gradle
@@ -159,29 +167,28 @@ jobs:
           }
           EOF
 
-      - name: Clean and Get Dependencies
+      - name: Clean Build
         run: |
           flutter clean
-          flutter pub get
+          cd android && rm -rf .gradle && cd ..
+
+      - name: Get Dependencies
+        run: flutter pub get
 
       - name: Build Debug APK
         run: flutter build apk --debug
 
-      - name: Verify APK Exists
-        run: |
-          if [ -f "build/app/outputs/flutter-apk/app-debug.apk" ]; then
-            echo "✅ APK found at: build/app/outputs/flutter-apk/app-debug.apk"
-            ls -lh build/app/outputs/flutter-apk/app-debug.apk
-          else
-            echo "❌ APK not found"
-            find build -name "*.apk" -type f 2>/dev/null || echo "No APK files found"
-            exit 1
-          fi
-
-      - name: Upload APK
-        if: success()
+      - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: dna63-debug-apk
+          name: debug-apk
           path: build/app/outputs/flutter-apk/app-debug.apk
-          retention-days: 7
+
+      - name: Build Release APK
+        run: flutter build apk --release
+
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
