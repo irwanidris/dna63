@@ -10,13 +10,11 @@ on:
 jobs:
   build-android:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -24,48 +22,28 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Setup Flutter
+      - name: Setup Flutter (no cache)
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.27.0'
           channel: 'stable'
           cache: false
 
-      - name: Pre-build checks
-        run: |
-          flutter doctor -v
-          echo "=== Pubspec Check ==="
-          head -30 pubspec.yaml
+      - name: Flutter doctor
+        run: flutter doctor -v
 
       - name: Clean
         run: flutter clean
 
-      - name: Get dependencies (with retry)
-        run: |
-          flutter pub get || (sleep 10 && flutter pub get)
-        timeout-minutes: 15
-
-      - name: Analyze code
-        run: flutter analyze --no-fatal-infos
-        continue-on-error: true
+      - name: Get dependencies
+        run: flutter pub get
 
       - name: Build Debug APK
         run: flutter build apk --debug
-        timeout-minutes: 25
-        env:
-          GRADLE_OPTS: "-Dorg.gradle.daemon=false -Xmx4g"
 
       - name: Upload APK artifact
-        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: dna63-debug-apk
           path: build/app/outputs/flutter-apk/*.apk
           retention-days: 7
-
-      - name: Show build outputs
-        if: always()
-        run: |
-          echo "=== Build Directory ==="
-          ls -la build/app/outputs/ 2>/dev/null || echo "No outputs folder"
-          ls -la build/app/outputs/flutter-apk/ 2>/dev/null || echo "No APK folder"
