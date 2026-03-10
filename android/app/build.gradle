@@ -25,9 +25,9 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 36
+    compileSdkVersion 34
     ndkVersion "27.0.12077973"
-    namespace "com.dna63.app"
+    namespace "com.rhinoresources.dna63"
     java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
     compileOptions {
@@ -45,9 +45,9 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.dna63.app"
-        minSdkVersion 24
-        targetSdkVersion 35
+        applicationId "com.rhinoresources.dna63"
+        minSdkVersion 21
+        targetSdkVersion 34
         versionCode 67
         versionName '9.1.8'
         multiDexEnabled true
