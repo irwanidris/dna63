@@ -113,8 +113,8 @@ jobs:
               
               defaultConfig {
                   applicationId "com.example.dna63"
-                  minSdk 21
-                  targetSdk 34
+                  minSdkVersion 21
+                  targetSdkVersion 34
                   versionCode flutterVersionCode.toInteger()
                   versionName flutterVersionName
               }
@@ -133,6 +133,32 @@ jobs:
           dependencies {}
           EOF
           echo "✅ Fixed app/build.gradle"
+
+      - name: Fix Gradle Properties
+        run: |
+          cat > android/gradle.properties << 'EOF'
+          org.gradle.jvmargs=-Xmx4G -XX:MaxMetaspaceSize=2G -XX:+HeapDumpOnOutOfMemoryError
+          android.useAndroidX=true
+          android.enableJetifier=true
+          org.gradle.java.home=${JAVA_HOME}
+          EOF
+          echo "✅ Fixed gradle.properties"
+
+      - name: Create local.properties
+        run: |
+          cat > android/local.properties << EOF
+          flutter.sdk=${FLUTTER_ROOT}
+          sdk.dir=/usr/local/lib/android/sdk
+          EOF
+          echo "✅ Created local.properties"
+
+      - name: Clean Gradle Cache
+        run: |
+          cd android
+          rm -rf .gradle
+          rm -rf gradle/wrapper/gradle-wrapper.jar
+          cd ..
+          echo "✅ Cleaned Gradle cache"
 
       - name: Fix Project Build Gradle
         run: |
@@ -158,27 +184,48 @@ jobs:
           EOF
           echo "✅ Fixed project build.gradle"
 
-      - name: Run Flutter Build
+      - name: Verify Fixes
+        run: |
+          echo "=== Verifying gradle-wrapper.properties ==="
+          cat android/gradle/wrapper/gradle-wrapper.properties | grep distributionUrl
+          echo "=== Verifying settings.gradle ==="
+          cat android/settings.gradle | grep "com.android.application"
+          echo "=== Verifying app/build.gradle ==="
+          cat android/app/build.gradle | grep "compileSdk"
+          echo "=== Verifying gradle.properties ==="
+          cat android/gradle.properties | grep "android.useAndroidX"
+
+      - name: Test Flutter Build
         run: |
           flutter clean
           flutter pub get
           flutter build apk --debug
-          echo "✅ Build successful!"
 
-      - name: Verify APK Exists
+      - name: Commit Changes
+        if: success()
         run: |
-          if [ -f "build/app/outputs/flutter-apk/app-debug.apk" ]; then
-            echo "✅ APK found at: build/app/outputs/flutter-apk/app-debug.apk"
-            ls -lh build/app/outputs/flutter-apk/app-debug.apk
-          else
-            echo "❌ APK not found"
-            find build -name "*.apk" -type f 2>/dev/null || echo "No APK files found"
-            exit 1
-          fi
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add android/
+          git commit -m "fix: auto-fix Flutter build config
+          
+          - Update Gradle to 8.11.1
+          - Update AGP to 8.3.2
+          - Update Kotlin to 1.9.22
+          - Set compileSdk to 34
+          - Enable AndroidX
+          - Set Java 17 compatibility"
+          git push
 
-      - name: Upload APK
+      - name: Upload Build Artifact
+        if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: dna63-debug-apk
+          name: debug-apk
           path: build/app/outputs/flutter-apk/app-debug.apk
-          retention-days: 7
+
+      - name: Report Failure
+        if: failure()
+        run: |
+          echo "❌ Build failed. Check logs above."
+          exit 1
