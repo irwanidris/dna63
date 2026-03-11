@@ -181,7 +181,7 @@ class _StoryVideoPostComponentState extends State<StoryVideoPostComponent> {
       if (widget.onVideoLoading != null) widget.onVideoLoading!();
       videoPlayerController = vc.VideoPlayerController.networkUrl(
         Uri.parse(widget.videoURl),
-        videoPlayerOptions: VideoPlayerOptions(
+        videoPlayerOptions: vc.VideoPlayerOptions(
           mixWithOthers: false,
           allowBackgroundPlayback: false,
         ),

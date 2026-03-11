@@ -9,7 +9,7 @@ import 'package:socialv/models/reactions/reactions_count_model.dart';
 import 'package:socialv/network/rest_apis.dart';
 import 'package:socialv/screens/blockReport/components/show_report_dialog.dart';
 import 'package:socialv/screens/blog/screens/blog_detail_screen.dart';
-// TEMP DISABLED: import 'package:socialv/screens/groups/screens/group_detail_screen.dart';
+import 'package:socialv/screens/groups/screens/group_detail_screen.dart';
 import 'package:socialv/screens/membership/screens/membership_plans_screen.dart';
 import 'package:socialv/screens/post/components/hidden_post_component.dart';
 import 'package:socialv/screens/post/components/like_button_widget.dart';

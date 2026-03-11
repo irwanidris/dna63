@@ -151,6 +151,7 @@ class CustomVideoPlayerSettings {
   final bool playbackSpeedButtonAvailable;
   final bool settingsButtonAvailable;
   final bool playOnlyOnce;
+  final dynamic systemUIModeInsideFullscreen;
   
   CustomVideoPlayerSettings({
     this.enterFullscreenButton,
@@ -160,6 +161,7 @@ class CustomVideoPlayerSettings {
     this.playbackSpeedButtonAvailable = true,
     this.settingsButtonAvailable = true,
     this.playOnlyOnce = false,
+    this.systemUIModeInsideFullscreen,
   });
 }
 
@@ -186,21 +188,52 @@ class CustomVideoPlayer extends StatelessWidget {
   Widget build(BuildContext context) => Container();
 }
 
-class VideoPlayerOptions {
-  final bool allowBackgroundPlayback;
-  final bool mixWithOthers;
-  
-  VideoPlayerOptions({
-    this.allowBackgroundPlayback = false,
-    this.mixWithOthers = true,
-  });
-}
+
 
 /// PAYPAL CHECKOUT STUB (CI: Git dependency disabled)
+extension PaypalCheckoutExtension on PaypalCheckout {
+  PaypalCheckout whenComplete(dynamic Function() callback) {
+    callback();
+    return this;
+  }
+  
+  PaypalCheckout onError(dynamic Function(dynamic, StackTrace) handler) {
+    return this;
+  }
+  
+  PaypalCheckout catchError(dynamic Function(dynamic) handler) {
+    return this;
+  }
+}
+
 class PaypalCheckout {
-  static Future<void> start({
+  PaypalCheckout({
+    dynamic context,
+    bool? sandboxMode,
+    required String clientId,
+    required String secretKey,
+    required String returnURL,
+    required String cancelURL,
+    required List<dynamic> transactions,
+    String? note,
+    required dynamic onSuccess,
+    required dynamic onError,
+    required dynamic onCancel,
+  }) {
+    // Stub payment simulation - always succeeds
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await Future.delayed(Duration(milliseconds: 500));
+      if (onSuccess != null) {
+        onSuccess({'message': 'Payment successful', 'data': {'id': 'STUB_${DateTime.now().millisecondsSinceEpoch}'}});
+      }
+    });
+  }
+  
+  PaypalCheckout launch(dynamic context) => this;
+  
+  static Future<void> execute({
     required dynamic context,
-    required bool sandboxMode,
+    bool? sandboxMode,
     required String clientId,
     required String secretKey,
     required String returnURL,

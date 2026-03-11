@@ -9,7 +9,7 @@ import 'package:socialv/models/common_models.dart';
 import 'package:socialv/screens/messages/components/recent_message_component.dart';
 import 'package:socialv/screens/messages/components/restore_component.dart';
 import 'package:socialv/screens/messages/components/search_message_component.dart';
-import 'package:socialv/screens/messages/functions.dart';
+import 'package:socialv/screens/messages/functions.dart' hide threadOpened;
 import 'package:socialv/screens/messages/screens/new_chat_screen.dart';
 import 'package:socialv/screens/messages/screens/user_settings_screen.dart';
 import 'package:socialv/utils/app_constants.dart';

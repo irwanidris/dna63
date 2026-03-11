@@ -253,13 +253,13 @@ Future<dynamic> restoreThread({required int threadId}) async {
 Future<void> saveChatBackground({required String id, required File image, required String type}) async {
   appStore.setLoading(true);
 
-  MultipartRequest multiPartRequest = await getMultiPartRequest(MessageAPIEndPoint.chatBackground);
+  http.MultipartRequest multiPartRequest = await getMultiPartRequest(MessageAPIEndPoint.chatBackground);
 
   multiPartRequest.headers['authorization'] = 'Bearer ${userStore.token}';
 
   multiPartRequest.fields['id'] = id;
   multiPartRequest.fields['type'] = type.validate();
-  multiPartRequest.files.add(await MultipartFile.fromPath('file', image.path));
+  multiPartRequest.files.add(await http.MultipartFile.fromPath('file', image.path));
 
   await sendMultiPartRequest(
     multiPartRequest,
