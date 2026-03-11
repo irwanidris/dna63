@@ -1,3 +1,4 @@
+import 'dart:core';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/models/gamipress/common_gamipress_model.dart';
 import 'package:socialv/models/gamipress/rewards_model.dart';
