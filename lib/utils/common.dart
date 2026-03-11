@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart' as customTabs;
 import 'package:giphy_get/giphy_get.dart';
 import 'package:html/parser.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -691,7 +691,7 @@ class InvoiceDownloader {
         String? directDownloadLink = response['download_link'];
 
         if (fileUrl != null) {
-          var fileResponse = await get(Uri.parse(fileUrl));
+          var fileResponse = await http.get(Uri.parse(fileUrl));
           if (fileResponse.statusCode != 200) {
             print('Failed to download file from URL. Status code: ${fileResponse.statusCode}');
             return null;

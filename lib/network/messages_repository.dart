@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/main.dart';
@@ -138,12 +138,12 @@ Future<DeleteMessageResponse> deleteMessage({required int messageId, required in
 
 Future<int?> uploadMessageMedia({required int threadId, MediaSourceModel? media}) async {
   int? fileID;
-  MultipartRequest multiPartRequest = await getMultiPartRequest('${MessageAPIEndPoint.thread}/$threadId/upload');
+  http.MultipartRequest multiPartRequest = await getMultiPartRequest('${MessageAPIEndPoint.thread}/$threadId/upload');
 
   multiPartRequest.headers.addAll(buildHeaderTokens(requiredNonce: false, requiredToken: true));
 
   if (media != null) {
-    multiPartRequest.files.add(await MultipartFile.fromPath('file', media.mediaFile.path, contentType: MediaType(media.mediaType, media.extension)));
+    multiPartRequest.files.add(await http.MultipartFile.fromPath('file', media.mediaFile.path, contentType: MediaType(media.mediaType, media.extension)));
   }
 
   await sendMultiPartRequest(

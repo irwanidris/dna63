@@ -6,7 +6,7 @@ import 'dart:math';
 
 import 'package:crypto/crypto.dart' as crypto;
 import 'package:firebase_remote_config/firebase_remote_config.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/configs.dart';
 import 'package:socialv/main.dart';
@@ -128,7 +128,7 @@ Future<Response> buildHttpResponse(
     Response response;
 
     if (method == HttpMethod.POST) {
-      response = await post(Uri.parse(url),
+      response = await http.post(Uri.parse(url),
           body: requestList.validate().isNotEmpty
               ? jsonEncode(requestList)
               : isAuth
@@ -136,11 +136,11 @@ Future<Response> buildHttpResponse(
                   : jsonEncode(request),
           headers: isAuth ? null : headers);
     } else if (method == HttpMethod.DELETE) {
-      response = await delete(Uri.parse(url), headers: passHeaders ? headers : {}, body: jsonEncode(request));
+      response = await http.delete(Uri.parse(url), headers: passHeaders ? headers : {}, body: jsonEncode(request));
     } else if (method == HttpMethod.PUT) {
-      response = await put(Uri.parse(url), body: jsonEncode(request), headers: headers);
+      response = await http.put(Uri.parse(url), body: jsonEncode(request), headers: headers);
     } else {
-      response = await get(Uri.parse(url), headers: passHeaders ? headers : {});
+      response = await http.get(Uri.parse(url), headers: passHeaders ? headers : {});
     }
 
     apiPrint(

@@ -1,7 +1,6 @@
 # This is a generated file; do not edit or check into version control.
 agora_rtc_engine=/data/.pub-cache/hosted/pub.dev/agora_rtc_engine-6.5.3/
 audio_session=/data/.pub-cache/hosted/pub.dev/audio_session-0.2.2/
-cached_video_player=/data/.pub-cache/git/cached_video_player-65da79ff70896cc51858fd5e70f0b1eed985a345/
 cloud_firestore=/data/.pub-cache/hosted/pub.dev/cloud_firestore-5.6.12/
 cloud_firestore_web=/data/.pub-cache/hosted/pub.dev/cloud_firestore_web-4.4.12/
 connectivity_plus=/data/.pub-cache/hosted/pub.dev/connectivity_plus-6.1.5/
