@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Radio;
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/components/file_picker_dialog_component.dart';
@@ -355,7 +355,7 @@ class _EditGroupScreenState extends State<EditGroupScreen> {
                                 if (!appStore.isLoading) editGroupScreenVars.groupType = value;
                                 log("${editGroupScreenVars.groupType}");
                               },
-                              child: Radio(value: GroupType.PUBLIC),
+                              child: RadioStub(value: GroupType.PUBLIC),
                             );
                           }),
                           Column(
@@ -397,7 +397,7 @@ class _EditGroupScreenState extends State<EditGroupScreen> {
                                 detailsChanged = true;
                                 editGroupScreenVars.groupType = value;
                               },
-                              child: Radio(value: GroupType.PRIVATE),
+                              child: RadioStub(value: GroupType.PRIVATE),
                             );
                           }),
                           Column(
@@ -438,7 +438,7 @@ class _EditGroupScreenState extends State<EditGroupScreen> {
                                 editGroupScreenVars.groupType = value;
                                 log("${editGroupScreenVars.groupType}");
                               },
-                              child: Radio(value: GroupType.HIDDEN),
+                              child: RadioStub(value: GroupType.HIDDEN),
                             );
                           }),
                           Column(

@@ -44,10 +44,11 @@ android/.gradle/
 android/.idea/
 android/build/
 android/captures/
-android/gradle/
-android/gradlew
-android/gradlew.bat
-android/gradle.properties
+# NOTE: Uncommented for CI/CD - gradle wrapper needed for GitHub Actions
+# android/gradle/
+# android/gradlew
+# android/gradlew.bat
+# android/gradle.properties
 coverage/
 android/fastlane/Preview.html
 android/fastlane/report.xml

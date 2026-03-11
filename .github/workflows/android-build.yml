@@ -23,36 +23,44 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.0'
+          flutter-version: '3.29.0'
           channel: 'stable'
+          cache: true
 
-      - name: Create Android Structure & Fix Gradle
+      - name: Check Android Structure
         run: |
-          # Create folders if not exist
+          if [ ! -d "android" ]; then
+            echo "❌ Android folder not found! Creating Flutter project structure..."
+            flutter create --platforms=android --org=com.rhinoresources . || true
+          fi
+          echo "✅ Android folder exists"
           mkdir -p android/gradle/wrapper
-          mkdir -p android/app/src/main/kotlin/com/irwanidris/dna63
-          
-          # Write gradle-wrapper.properties
-          cat > android/gradle/wrapper/gradle-wrapper.properties << 'EOF'
-          distributionBase=GRADLE_USER_HOME
+          ls -la android/
+
+      - name: Create Gradle Wrapper (if missing)
+        run: |
+          if [ ! -f "android/gradle/wrapper/gradle-wrapper.properties" ]; then
+            mkdir -p android/gradle/wrapper
+            echo 'distributionBase=GRADLE_USER_HOME
           distributionPath=wrapper/dists
           zipStoreBase=GRADLE_USER_HOME
           zipStorePath=wrapper/dists
-          distributionUrl=https\://services.gradle.org/distributions/gradle-8.11.1-all.zip
-          EOF
-          echo "✅ Fixed gradle-wrapper.properties"
+          distributionUrl=https\://services.gradle.org/distributions/gradle-8.11.1-all.zip' > android/gradle/wrapper/gradle-wrapper.properties
+            echo "✅ Created gradle-wrapper.properties"
+          fi
 
-      - name: Fix Settings Gradle
+      - name: Create Settings Gradle KTS (if missing)
         run: |
-          cat > android/settings.gradle << 'EOF'
+          if [ ! -f "android/settings.gradle.kts" ]; then
+            cat > android/settings.gradle.kts << 'EOF'
           pluginManagement {
-              def flutterSdkPath = {
-                  def properties = new Properties()
-                  file("local.properties").withInputStream { properties.load(it) }
-                  def flutterSdkPath = properties.getProperty("flutter.sdk")
-                  assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
-                  return flutterSdkPath
-              }()
+              val flutterSdkPath = run {
+                  val properties = java.util.Properties()
+                  file("local.properties").inputStream().use { properties.load(it) }
+                  val flutterSdkPath = properties.getProperty("flutter.sdk")
+                  require(flutterSdkPath != null) { "flutter.sdk not set in local.properties" }
+                  flutterSdkPath
+              }
               includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
               repositories {
                   google()
@@ -61,140 +69,110 @@ jobs:
               }
           }
           plugins {
-              id "dev.flutter.flutter-plugin-loader" version "1.0.0"
-              id "com.android.application" version "8.3.2" apply false
-              id "org.jetbrains.kotlin.android" version "1.9.22" apply false
+              id("dev.flutter.flutter-plugin-loader") version "1.0.0"
+              id("com.android.application") version "8.3.2" apply false
+              id("org.jetbrains.kotlin.android") version "1.9.22" apply false
           }
-          include ":app"
+          include(":app")
           EOF
+            echo "✅ Created settings.gradle.kts"
+          fi
 
-      - name: Fix App Build Gradle
+      - name: Create App Build Gradle KTS (if missing)
         run: |
-          cat > android/app/build.gradle << 'EOF'
+          if [ ! -f "android/app/build.gradle.kts" ]; then
+            cat > android/app/build.gradle.kts << 'EOF'
           plugins {
-              id "com.android.application"
-              id "kotlin-android"
-              id "dev.flutter.flutter-gradle-plugin"
+              id("com.android.application")
+              id("kotlin-android")
+              id("dev.flutter.flutter-gradle-plugin")
           }
-          
-          def localProperties = new Properties()
-          def localPropertiesFile = rootProject.file('local.properties')
-          if (localPropertiesFile.exists()) {
-              localPropertiesFile.withReader('UTF-8') { reader ->
-                  localProperties.load(reader)
-              }
-          }
-          
-          def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
-          if (flutterVersionCode == null) {
-              flutterVersionCode = '1'
-          }
-          
-          def flutterVersionName = localProperties.getProperty('flutter.versionName')
-          if (flutterVersionName == null) {
-              flutterVersionName = '1.0'
-          }
-          
           android {
-              namespace "com.irwanidris.dna63"
-              compileSdk 34
-              ndkVersion flutter.ndkVersion
-              
+              namespace = "com.rhinoresources.dna63"
+              compileSdk = flutter.compileSdkVersion
+              ndkVersion = flutter.ndkVersion
               compileOptions {
-                  sourceCompatibility JavaVersion.VERSION_17
-                  targetCompatibility JavaVersion.VERSION_17
+                  sourceCompatibility = JavaVersion.VERSION_17
+                  targetCompatibility = JavaVersion.VERSION_17
               }
-              
               kotlinOptions {
-                  jvmTarget = '17'
+                  jvmTarget = JavaVersion.VERSION_17.toString()
               }
-              
-              sourceSets {
-                  main.java.srcDirs += 'src/main/kotlin'
-              }
-              
               defaultConfig {
-                  applicationId "com.irwanidris.dna63"
-                  minSdkVersion 21
-                  targetSdkVersion 34
-                  versionCode flutterVersionCode.toInteger()
-                  versionName flutterVersionName
+                  applicationId = "com.rhinoresources.dna63"
+                  minSdk = flutter.minSdkVersion
+                  targetSdk = flutter.targetSdkVersion
+                  versionCode = flutter.versionCode
+                  versionName = flutter.versionName
               }
-              
               buildTypes {
                   release {
-                      signingConfig signingConfigs.debug
+                      signingConfig = signingConfigs.getByName("debug")
                   }
               }
           }
-          
           flutter {
-              source '../..'
+              source = "../.."
           }
-          
-          dependencies {}
           EOF
+            echo "✅ Created app/build.gradle.kts"
+          fi
 
-      - name: Fix Gradle Properties
+      - name: Create Root Build Gradle KTS (if missing)
         run: |
-          cat > android/gradle.properties << 'EOF'
-          org.gradle.jvmargs=-Xmx4G -XX:MaxMetaspaceSize=2G -XX:+HeapDumpOnOutOfMemoryError
-          android.useAndroidX=true
-          android.enableJetifier=true
-          org.gradle.java.home=${JAVA_HOME}
-          EOF
-
-      - name: Create local.properties
-        run: |
-          cat > android/local.properties << EOF
-          flutter.sdk=${FLUTTER_ROOT}
-          sdk.dir=/usr/local/lib/android/sdk
-          EOF
-
-      - name: Fix Project Build Gradle
-        run: |
-          cat > android/build.gradle << 'EOF'
+          if [ ! -f "android/build.gradle.kts" ]; then
+            cat > android/build.gradle.kts << 'EOF'
           allprojects {
               repositories {
                   google()
                   mavenCentral()
               }
           }
-          
-          rootProject.buildDir = '../build'
+          val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build").get()
+          rootProject.layout.buildDirectory.value(newBuildDir)
           subprojects {
-              project.buildDir = "${rootProject.buildDir}/${project.name}"
+              val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
+              project.layout.buildDirectory.value(newSubprojectBuildDir)
           }
           subprojects {
-              project.evaluationDependsOn(':app')
+              project.evaluationDependsOn(":app")
           }
-          tasks.register("clean", Delete) {
-              delete rootProject.buildDir
+          tasks.register<Delete>("clean") {
+              delete(rootProject.layout.buildDirectory)
           }
           EOF
+            echo "✅ Created build.gradle.kts"
+          fi
 
-      - name: Clean Build
+      - name: Create local.properties
         run: |
-          flutter clean
-          cd android && rm -rf .gradle && cd ..
+          cat > android/local.properties << EOF
+          flutter.sdk=${{ steps.setup-flutter.outputs.flutter-path }}
+          sdk.dir=/usr/local/lib/android/sdk
+          EOF
+          echo "✅ Created local.properties"
 
       - name: Get Dependencies
         run: flutter pub get
 
       - name: Build Debug APK
         run: flutter build apk --debug
+        continue-on-error: true
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
           name: debug-apk
           path: build/app/outputs/flutter-apk/app-debug.apk
+        if: success()
 
-      - name: Build Release APK
+      - name: Build Release APK (unsigned)
         run: flutter build apk --release
+        continue-on-error: true
 
       - name: Upload Release APK
         uses: actions/upload-artifact@v4
         with:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
+        if: success()

@@ -1,17 +1,19 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Radio;
+import 'package:flutter/material.dart' as material;
 
-export 'package:flutter/material.dart' hide Radio;
+/// RadioPlaceholder - holds just the value for RadioGroup
+class RadioPlaceholder<T> extends StatelessWidget {
+  final T value;
+  const RadioPlaceholder({Key? key, required this.value}) : super(key: key);
+  @override
+  Widget build(BuildContext context) => const SizedBox.shrink();
+}
 
-/// Simple radio button wrapper for DNA63 app
-/// Usage: RadioGroup<int>(
-///   groupValue: selectedValue,
-///   onChanged: (val) => setState(() => selectedValue = val),
-///   child: Radio<int>(value: 1),  // only value, no groupValue
-/// )
+/// RadioGroup - wraps RadioPlaceholder with actual Radio functionality
 class RadioGroup<T> extends StatelessWidget {
   final T? groupValue;
   final ValueChanged<T?>? onChanged;
-  final _RadioPlaceholder<T> child;
+  final RadioPlaceholder<T> child;
 
   const RadioGroup({
     Key? key,
@@ -22,46 +24,19 @@ class RadioGroup<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isSelected = groupValue == child.value;
     return GestureDetector(
       onTap: () => onChanged?.call(child.value),
-      child: Container(
-        width: 24,
-        height: 24,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          border: Border.all(
-            color: isSelected ? Theme.of(context).primaryColor : Colors.grey,
-            width: 2,
-          ),
-        ),
-        child: isSelected
-            ? Center(
-                child: Container(
-                  width: 12,
-                  height: 12,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Theme.of(context).primaryColor,
-                  ),
-                ),
-              )
-            : null,
+      child: material.Radio<T>(
+        value: child.value,
+        groupValue: groupValue,
+        onChanged: onChanged,
       ),
     );
   }
 }
 
-/// Radio placeholder - just holds the value
-class _RadioPlaceholder<T> extends StatelessWidget {
-  final T value;
-  
-  const _RadioPlaceholder({
-    required this.value,
-  });
-  
-  @override
-  Widget build(BuildContext context) => const SizedBox.shrink();
+/// Radio factory function - creates a RadioPlaceholder
+/// Usage: child: RadioStub(value: GroupType.PUBLIC)
+RadioPlaceholder<T> RadioStub<T>({required T value}) {
+  return RadioPlaceholder<T>(value: value);
 }
-
-
