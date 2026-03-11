@@ -3,7 +3,7 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/main.dart';
 import 'package:socialv/models/notifications/notification_model.dart';
 import 'package:socialv/screens/forums/screens/topic_detail_screen.dart';
-// TEMP DISABLED: import 'package:socialv/screens/groups/screens/group_detail_screen.dart';
+import 'package:socialv/screens/groups/screens/group_detail_screen.dart';
 import 'package:socialv/screens/membership/screens/membership_plans_screen.dart';
 import 'package:socialv/screens/notification/components/member_verified_notification.dart';
 import 'package:socialv/screens/notification/components/reaction_notification_component.dart';

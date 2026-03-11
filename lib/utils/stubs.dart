@@ -1,5 +1,6 @@
 // STUBS for MVP build - disabled modules
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 /// SHOP STUBS
 class EditShopDetailsScreen extends StatelessWidget {
@@ -130,18 +131,83 @@ class OrderDetailScreen extends StatelessWidget {
 
 /// APPINIO VIDEO PLAYER STUBS (CI: Git dependency disabled)
 class CachedVideoPlayerController {
-  CachedVideoPlayerController.network(String url);
-  CachedVideoPlayerController.file(dynamic file);
+  final dynamic _file;
+  CachedVideoPlayerController.network(String url) : _file = null;
+  CachedVideoPlayerController.file(dynamic file) : _file = file;
+  
+  ValueNotifier<bool> get videoPlayerController => ValueNotifier<bool>(false);
+  
   Future<void> initialize() async {}
+  void play() {}
+  void pause() {}
   void dispose() {}
+}
+
+class CustomVideoPlayerSettings {
+  final Widget? enterFullscreenButton;
+  final Widget? exitFullscreenButton;
+  final Widget? playButton;
+  final Widget? pauseButton;
+  final bool playbackSpeedButtonAvailable;
+  final bool settingsButtonAvailable;
+  final bool playOnlyOnce;
+  
+  CustomVideoPlayerSettings({
+    this.enterFullscreenButton,
+    this.exitFullscreenButton,
+    this.playButton,
+    this.pauseButton,
+    this.playbackSpeedButtonAvailable = true,
+    this.settingsButtonAvailable = true,
+    this.playOnlyOnce = false,
+  });
 }
 
 class CustomVideoPlayerController {
-  CustomVideoPlayerController({required CachedVideoPlayerController videoPlayerController, required dynamic customVideoPlayerSettings});
+  final CachedVideoPlayerController customVideoPlayerController;
+  final CachedVideoPlayerController videoPlayerController;
+  
+  CustomVideoPlayerController({ 
+    dynamic context,
+    required CachedVideoPlayerController videoPlayerController,
+    required CustomVideoPlayerSettings customVideoPlayerSettings,
+  }) : this.videoPlayerController = videoPlayerController, 
+       this.customVideoPlayerController = videoPlayerController;
+  
   void dispose() {}
 }
 
+class CustomVideoPlayer extends StatelessWidget {
+  final CustomVideoPlayerController customVideoPlayerController;
+  
+  const CustomVideoPlayer({Key? key, required this.customVideoPlayerController}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) => Container();
+}
+
+class VideoPlayerOptions {
+  final bool allowBackgroundPlayback;
+  final bool mixWithOthers;
+  
+  VideoPlayerOptions({
+    this.allowBackgroundPlayback = false,
+    this.mixWithOthers = true,
+  });
+}
+
 /// PAYPAL CHECKOUT STUB (CI: Git dependency disabled)
-class FlutterPaypalCheckout {
-  static Future<void> execute(dynamic context, {required String clientId, required String secretKey, required dynamic checkoutInfo, required Function(dynamic) onSuccess, required Function(dynamic) onError, required Function(dynamic) onCancel}) async {}
+class PaypalCheckout {
+  static Future<void> start({
+    required dynamic context,
+    required bool sandboxMode,
+    required String clientId,
+    required String secretKey,
+    required String returnURL,
+    required String cancelURL,
+    required List<dynamic> transactions,
+    required Function(dynamic) onSuccess,
+    required Function(dynamic) onError,
+    required Function(dynamic) onCancel,
+  }) async {}
 }

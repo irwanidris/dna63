@@ -1,25 +1,20 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:intl/intl.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/main.dart';
 import 'package:socialv/store/message_store.dart';
-
 import '../../../utils/app_constants.dart';
 
 class PreviewScreen extends StatelessWidget {
   final File wallPaperFile;
-
   PreviewScreen({required this.wallPaperFile});
-
   final MessageStore previewScreenVars = MessageStore();
 
   @override
   Widget build(BuildContext context) {
     bool isChange = false;
-
     return PopScope(
       canPop: true,
       onPopInvokedWithResult: (didPop, result) {
@@ -111,44 +106,36 @@ class PreviewScreen extends StatelessWidget {
                           return Observer(builder: (context) {
                             return AlertDialog(
                               title: Text("Set Wallpaper"),
-                              contentPadding: EdgeInsets.zero,
                               content: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  ListTile(
+                                  RadioListTile<int>(
                                     title: Text("For this chat"),
-                                    leading: RadioGroup<int>(
-                                      // 0 represents "For this chat"
-                                      groupValue: previewScreenVars.selectedOption,
-                                      onChanged: (int? value) {
-                                        previewScreenVars.selectedOption = value!;
-                                        messageStore.isGeneralSetting = false;
-                                      },
-                                      child: Radio<int>(value: 0),
-                                    ),
+                                    value: 0,
+                                    groupValue: previewScreenVars.selectedOption,
+                                    onChanged: (int? value) {
+                                      previewScreenVars.selectedOption = value!;
+                                      messageStore.isGeneralSetting = false;
+                                    },
                                   ),
-                                  ListTile(
+                                  RadioListTile<int>(
                                     title: Text("For all chat"),
-                                    leading: RadioGroup<int>(
-                                      groupValue: previewScreenVars.selectedOption,
-                                      onChanged: (int? value) {
-                                        previewScreenVars.selectedOption = value!;
-                                        messageStore.isGeneralSetting = true;
-                                      },
-                                      child: Radio<int>(value: 1),
-                                    ),
+                                    value: 1,
+                                    groupValue: previewScreenVars.selectedOption,
+                                    onChanged: (int? value) {
+                                      previewScreenVars.selectedOption = value!;
+                                      messageStore.isGeneralSetting = true;
+                                    },
                                   ),
                                 ],
                               ),
                               actions: [
-                                // Cancel button
                                 TextButton(
                                   onPressed: () {
-                                    Navigator.of(context).pop(); // Close the dialog
+                                    Navigator.of(context).pop();
                                   },
                                   child: Text('Cancel'),
                                 ),
-                                // OK button
                                 TextButton(
                                   onPressed: () {
                                     isChange = true;
