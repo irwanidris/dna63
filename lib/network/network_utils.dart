@@ -7,6 +7,7 @@ import 'dart:math';
 import 'package:crypto/crypto.dart' as crypto;
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:http/http.dart' as http;
+export 'package:http/http.dart' show Response, MultipartRequest, MultipartFile;
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/configs.dart';
 import 'package:socialv/main.dart';
@@ -386,6 +387,13 @@ Future<void> reGenerateToken() async {
     throw 'Session expired. Please login again.';
   }
 }
+
+void apiPrint({
+  String url = "",
+  String? endPoint,
+  Map<String, dynamic>? headers,
+  dynamic request,
+  dynamic multipartRequest,
   int statusCode = 0,
   String responseBody = "",
   String methodtype = "",

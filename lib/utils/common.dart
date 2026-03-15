@@ -28,7 +28,7 @@ import '../screens/blog/screens/blog_detail_screen.dart';
 import '../screens/dashboard_screen.dart';
 import '../screens/post/screens/single_post_screen.dart';
 import '../configs.dart';
-import 'constants.dart';
+import 'constants.dart'; import 'colors.dart';
 
 InputDecoration inputDecoration(
   BuildContext context, {

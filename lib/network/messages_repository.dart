@@ -1,4 +1,5 @@
-import 'dart:core' show String, int, bool, dynamic, Future, Map, List, Iterable, Exception, Response;
+import 'dart:core' show String, int, bool, dynamic, Future, Map, List, Iterable, Exception;
+export 'package:http/http.dart' show Response;
 import 'dart:convert';
 import 'dart:io';
 

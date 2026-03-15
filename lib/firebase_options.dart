@@ -41,11 +41,11 @@ class DefaultFirebaseOptions {
   }
 
   static final FirebaseOptions firebaseConfig = FirebaseOptions(
-    apiKey: 'Please add your api key here',
-    appId: isIOS ? 'Please add key here' : 'Please add key here',
-    messagingSenderId: '203176417957',
-    projectId: 'socialv-flutter',
-    storageBucket: 'socialv-flutter.appspot.com',
-    iosBundleId: 'com.iconic.socialv',
+    apiKey: 'AIzaSyDBvaM6tkzt64Llcgd4Bk10tO_XE7rT9Dg',
+    appId: isIOS ? 'Please add iOS app ID here' : '1:207214705257:android:6bee33a03a2c9ddf9dc0f8',
+    messagingSenderId: '207214705257',
+    projectId: 'dna63-apps-ce32a',
+    storageBucket: 'dna63-apps-ce32a.firebasestorage.app',
+    iosBundleId: 'com.rhinoresources.dna63',
   );
 }

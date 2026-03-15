@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import "package:http/http.dart" as http;
+export "package:http/http.dart" show Response, MultipartRequest, MultipartFile;
 import 'package:http_parser/http_parser.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv/main.dart';
