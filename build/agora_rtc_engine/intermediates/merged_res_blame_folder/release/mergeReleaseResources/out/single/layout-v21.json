@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "io.agora.agora_rtc_ng.agora_rtc_engine-release-45:/layout-v21/notification_template_icon_group.xml",
+        "source": "io.agora.agora_rtc_ng.agora_rtc_engine-core-1.13.1-16:/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "io.agora.agora_rtc_ng.agora_rtc_engine-release-45:/layout-v21/notification_action_tombstone.xml",
+        "source": "io.agora.agora_rtc_ng.agora_rtc_engine-core-1.13.1-16:/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "io.agora.agora_rtc_ng.agora_rtc_engine-release-45:/layout-v21/notification_template_custom_big.xml",
+        "source": "io.agora.agora_rtc_ng.agora_rtc_engine-core-1.13.1-16:/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "io.agora.agora_rtc_ng.agora_rtc_engine-release-45:/layout-v21/notification_action.xml",
+        "source": "io.agora.agora_rtc_ng.agora_rtc_engine-core-1.13.1-16:/layout-v21/notification_action.xml"
+    }
+]

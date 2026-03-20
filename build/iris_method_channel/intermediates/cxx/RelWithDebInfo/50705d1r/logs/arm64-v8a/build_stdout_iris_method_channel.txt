@@ -1,0 +1,2 @@
+ninja: Entering directory `/data/.pub-cache/hosted/pub.dev/iris_method_channel-2.2.4/android/.cxx/RelWithDebInfo/50705d1r/arm64-v8a'
+ninja: no work to do.

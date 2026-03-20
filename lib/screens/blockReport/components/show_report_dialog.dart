@@ -1,0 +1,196 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:nb_utils/nb_utils.dart';
+import 'package:socialv/components/loading_widget.dart';
+import 'package:socialv/main.dart';
+import 'package:socialv/network/rest_apis.dart';
+import 'package:socialv/store/fragment_store/home_fragment_store.dart';
+import 'package:socialv/utils/app_constants.dart';
+
+import '../../../models/general_settings_model.dart';
+
+class ShowReportDialog extends StatefulWidget {
+  final bool isPostReport;
+  final bool isGroupReport;
+  final int? postId;
+  final int? userId;
+  final int? groupId;
+
+  const ShowReportDialog({required this.isPostReport, this.postId, this.userId, this.isGroupReport = false, this.groupId});
+
+  @override
+  State<ShowReportDialog> createState() => _ShowReportDialogState();
+}
+
+class _ShowReportDialogState extends State<ShowReportDialog> {
+  HomeFragStore showReportDialogVars = HomeFragStore();
+  final reportFormKey = GlobalKey<FormState>();
+  String selectedReport = '';
+
+  TextEditingController report = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Observer(
+        builder: (_) => Stack(
+          children: [
+            SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  16.height,
+                  Text(
+                    "Report",
+                    style: boldTextStyle(),
+                  ),
+                  16.height,
+                  Text(language.whatAreYouReportingFor, style: boldTextStyle()),
+                  16.height,
+                  Text(
+                    '${language.reportText} ${widget.isPostReport ? language.reportPortText : language.reportAccountText}',
+                    style: secondaryTextStyle(),
+                  ).paddingOnly(left: 16, right: 16, bottom: 16),
+                  ListView.builder(
+                    shrinkWrap: true,
+                    primary: false,
+                    physics: NeverScrollableScrollPhysics(),
+                    itemCount: appStore.reportTypes.validate().length,
+                    itemBuilder: (context, index) {
+                      ReportTypes data = appStore.reportTypes.validate()[index];
+
+                      return Observer(builder: (context) {
+                        return GestureDetector(
+                          onTap: () {
+                            if (!appStore.isLoading) {
+                              showReportDialogVars.selectedReportIndex = index;
+                              selectedReport = data.label;
+                              setState(() {});
+                            }
+                          },
+                          child: Container(
+                            color: showReportDialogVars.selectedReportIndex == index ? context.primaryColor.withAlpha(40) : context.cardColor,
+                            padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                            child: Text(data.label.validate(), style: boldTextStyle(size: 14)),
+                          ),
+                        );
+                      });
+                    },
+                  ),
+                  if (selectedReport == "Other")
+                    Form(
+                      key: reportFormKey,
+                      child: TextField(
+                        enabled: !appStore.isLoading,
+                        style: primaryTextStyle(),
+                        controller: report,
+                        maxLines: 3,
+                        minLines: 2,
+                        decoration: inputDecorationFilled(
+                          context,
+                          label: language.report,
+                          fillColor: context.scaffoldBackgroundColor,
+                          // labelStyle: secondaryTextStyle(weight: FontWeight.w600),
+                        ),
+                      ).paddingSymmetric(horizontal: 16),
+                    ).paddingOnly(bottom: 16, top: 16),
+                  Row(
+                    children: [
+                      AppButton(
+                        elevation: 0,
+                        shapeBorder: RoundedRectangleBorder(
+                          borderRadius: radius(defaultAppButtonRadius),
+                          side: BorderSide(color: viewLineColor),
+                        ),
+                        color: context.scaffoldBackgroundColor,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.close, color: textPrimaryColorGlobal, size: 20),
+                            6.width,
+                            Text(language.cancel, style: boldTextStyle()),
+                          ],
+                        ).fit(),
+                        onTap: () {
+                          if (!appStore.isLoading) finish(context, false);
+                        },
+                      ).expand(),
+                      16.width,
+                      Observer(builder: (context) {
+                        return AppButton(
+                          elevation: 0,
+                          color: Colors.red,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.report_gmailerrorred, color: Colors.white, size: 20),
+                              6.width,
+                              Text(language.report, style: boldTextStyle(color: Colors.white)),
+                            ],
+                          ).fit(),
+                          onTap: () {
+                            if (!appStore.isLoading)
+                              ifNotTester(() async {
+                                if (reportFormKey.currentState!.validate()) {
+                                  reportFormKey.currentState!.save();
+
+                                  appStore.setLoading(true);
+
+                                  if (widget.isPostReport) {
+                                    await reportPost(
+                                      report: report.text,
+                                      postId: widget.postId.validate(),
+                                      reportType: appStore.reportTypes[showReportDialogVars.selectedReportIndex].key.validate(),
+                                      userId: widget.userId.validate(),
+                                    ).then((value) {
+                                      toast(value.message);
+                                      appStore.setLoading(false);
+                                      finish(context);
+                                    }).catchError((e) {
+                                      toast(e.toString());
+                                      appStore.setLoading(false);
+                                    });
+                                  } else if (widget.isGroupReport) {
+                                    await reportGroup(
+                                      report: report.text,
+                                      groupId: widget.groupId.validate(),
+                                      reportType: appStore.reportTypes[showReportDialogVars.selectedReportIndex].key.validate(),
+                                    ).then((value) {
+                                      toast(value.message);
+                                      appStore.setLoading(false);
+                                      finish(context);
+                                    }).catchError((e) {
+                                      toast(e.toString());
+                                      appStore.setLoading(false);
+                                    });
+                                  } else {
+                                    await reportUser(
+                                      report: report.text,
+                                      userId: widget.userId.validate(),
+                                      reportType: appStore.reportTypes[showReportDialogVars.selectedReportIndex].key.validate(),
+                                    ).then((value) {
+                                      toast(value.message);
+                                      appStore.setLoading(false);
+                                      finish(context);
+                                    }).catchError((e) {
+                                      toast(e.toString());
+                                      appStore.setLoading(false);
+                                    });
+                                  }
+                                }
+                              });
+                          },
+                        ).expand();
+                      }),
+                    ],
+                  ).paddingOnly(left: 16, right: 16, bottom: 16),
+                ],
+              ),
+            ),
+            LoadingWidget().center().visible(appStore.isLoading)
+          ],
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.iconic.socialv.app-mergeReleaseResources-143:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "/data/.gradle/caches/8.11.1/transforms/1ae62331e50dd418e7e031cebabe14ac/transformed/material-1.12.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    }
+                }
+            ]
+        }
+    ]
+}

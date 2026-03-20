@@ -1,0 +1,2 @@
+/data/.openclaw/workspace/socialv/android/app/.cxx/RelWithDebInfo/1v5tv3a2/x86/CMakeFiles/edit_cache.dir
+/data/.openclaw/workspace/socialv/android/app/.cxx/RelWithDebInfo/1v5tv3a2/x86/CMakeFiles/rebuild_cache.dir

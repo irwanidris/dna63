@@ -1,0 +1,4 @@
+/data/.openclaw/workspace/tools/android-sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /data/.pub-cache/hosted/pub.dev/iris_method_channel-2.2.4/android/.cxx/RelWithDebInfo/50705d1r/x86 \
+  iris_method_channel
