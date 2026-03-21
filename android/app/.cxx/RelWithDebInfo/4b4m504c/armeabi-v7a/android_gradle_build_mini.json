@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/data/.openclaw/workspace/flutter_sdk/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/data/.openclaw/workspace/tools/android-sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/data/.openclaw/workspace/dna63/android/app/.cxx/RelWithDebInfo/4b4m504c/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/data/.openclaw/workspace/tools/android-sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/data/.openclaw/workspace/dna63/android/app/.cxx/RelWithDebInfo/4b4m504c/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /data/.pub-cache/git/cached_video_player-65da79ff70896cc51858fd5e70f0b1eed985a345/android/src/main/AndroidManifest.xml:1:1-2:12
+INJECTED from /data/.pub-cache/git/cached_video_player-65da79ff70896cc51858fd5e70f0b1eed985a345/android/src/main/AndroidManifest.xml:1:1-2:12
+	package
+		INJECTED from /data/.pub-cache/git/cached_video_player-65da79ff70896cc51858fd5e70f0b1eed985a345/android/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /data/.pub-cache/git/cached_video_player-65da79ff70896cc51858fd5e70f0b1eed985a345/android/src/main/AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from /data/.pub-cache/git/cached_video_player-65da79ff70896cc51858fd5e70f0b1eed985a345/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /data/.pub-cache/git/cached_video_player-65da79ff70896cc51858fd5e70f0b1eed985a345/android/src/main/AndroidManifest.xml
+INJECTED from /data/.pub-cache/git/cached_video_player-65da79ff70896cc51858fd5e70f0b1eed985a345/android/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /data/.pub-cache/git/cached_video_player-65da79ff70896cc51858fd5e70f0b1eed985a345/android/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /data/.pub-cache/git/cached_video_player-65da79ff70896cc51858fd5e70f0b1eed985a345/android/src/main/AndroidManifest.xml

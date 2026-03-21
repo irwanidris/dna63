@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "207214705257",
+    "project_id": "dna63-apps-ce32a",
+    "storage_bucket": "dna63-apps-ce32a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207214705257:android:6bee33a03a2c9ddf9dc0f8",
+        "android_client_info": {
+          "package_name": "com.iconic.socialv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBvaM6tkzt64Llcgd4Bk10tO_XE7rT9Dg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

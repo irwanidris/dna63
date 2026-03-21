@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="colorAccent">#2F65B9</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <string name="com.google.firebase.crashlytics.mapping_file_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">652aa23fc3194ccb8da8ed22d77a4464</string>
+    <string name="default_notification_channel_id">notification</string>
+    <string name="gcm_defaultSenderId" translatable="false">207214705257</string>
+    <string name="google_api_key" translatable="false">AIzaSyDBvaM6tkzt64Llcgd4Bk10tO_XE7rT9Dg</string>
+    <string name="google_app_id" translatable="false">1:207214705257:android:6bee33a03a2c9ddf9dc0f8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDBvaM6tkzt64Llcgd4Bk10tO_XE7rT9Dg</string>
+    <string name="google_storage_bucket" translatable="false">dna63-apps-ce32a.firebasestorage.app</string>
+    <string name="project_id" translatable="false">dna63-apps-ce32a</string>
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <style name="NormalTheme" parent="Theme.MaterialComponents">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>

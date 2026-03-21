@@ -1,0 +1,5 @@
+ninja: Entering directory `/data/.pub-cache/hosted/pub.dev/iris_method_channel-2.2.4/android/.cxx/RelWithDebInfo/5h6z3p5z/x86'
+[1/4] Building C object CMakeFiles/iris_method_channel.dir/dart-sdk/include/dart_api_dl.c.o
+[2/4] Building CXX object CMakeFiles/iris_method_channel.dir/iris_life_cycle_observer.cc.o
+[3/4] Building CXX object CMakeFiles/iris_method_channel.dir/iris_event.cc.o
+[4/4] Linking CXX shared library /data/.openclaw/workspace/dna63/build/iris_method_channel/intermediates/cxx/RelWithDebInfo/5h6z3p5z/obj/x86/libiris_method_channel.so
