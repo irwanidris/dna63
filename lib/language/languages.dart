@@ -1746,4 +1746,5 @@ abstract class BaseLanguage {
 
   String get demoteFromAdmin;
   String get viewProduct;
+  String get messagingTemporarilyDisabled;
 }
