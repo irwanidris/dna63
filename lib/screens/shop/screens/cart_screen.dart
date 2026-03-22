@@ -574,7 +574,8 @@ class _CartScreenState extends State<CartScreen> {
                                 },
                               ).center()
                             : Offstage(),
-                        16.height,
+                      ],
+                      16.height,
 
                         ///Related products List
                         Text(language.relatedProducts, style: boldTextStyle(size: 18)).paddingSymmetric(horizontal: 16).visible(shopStore.productList.isNotEmpty),
