@@ -10,7 +10,7 @@ import 'package:socialv/models/woo_commerce/payment_model.dart';
 import 'package:socialv/models/woo_commerce/recently_viewed_products_model.dart';
 import 'package:socialv/models/woo_commerce/related_products_model.dart';
 import 'package:socialv/models/woo_commerce/wishlist_model.dart';
-import '../models/common_models.dart';
+import '../models/woo_commerce/common_models.dart' hide ProductFilters;
 import '../models/woo_commerce/category_model.dart';
 import '../models/woo_commerce/common_models.dart';
 import '../models/woo_commerce/product_list_model.dart';
