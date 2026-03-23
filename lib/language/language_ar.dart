@@ -2618,4 +2618,5 @@ class LanguageAr extends BaseLanguage {
 
   @override
   String get viewProduct => 'عرض المنتج';
+  @override String get messagingTemporarilyDisabled => 'Messaging is temporarily disabled';
 }

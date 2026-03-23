@@ -2622,4 +2622,5 @@ class LanguageFr extends BaseLanguage {
 
   @override
   String get viewProduct => 'Voir le produit';
+  @override String get messagingTemporarilyDisabled => 'Messaging is temporarily disabled';
 }

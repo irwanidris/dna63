@@ -2620,4 +2620,5 @@ class LanguageDe extends BaseLanguage {
 
   @override
   String get viewProduct => 'Produkt ansehen';
+  @override String get messagingTemporarilyDisabled => 'Nachrichten sind vorübergehend deaktiviert';
 }

@@ -2621,4 +2621,5 @@ class LanguageHi extends BaseLanguage {
 
   @override
   String get viewProduct => 'उत्पाद देखें';
+  @override String get messagingTemporarilyDisabled => 'Messaging is temporarily disabled';
 }
