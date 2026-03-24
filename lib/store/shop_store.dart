@@ -15,6 +15,7 @@ import '../models/woo_commerce/category_model.dart';
 import '../models/woo_commerce/common_models.dart';
 import '../models/woo_commerce/product_list_model.dart';
 import '../utils/constants.dart';
+import '../models/common_models.dart';
 
 part 'shop_store.g.dart';
 
