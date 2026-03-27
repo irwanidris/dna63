@@ -598,7 +598,7 @@ class _CartScreenState extends State<CartScreen> {
                           );
                         }),
 
-                        if (shopStore.recentlyViewedProductList.length > 0)
+                        if (shopStore.recentlyViewedProductList.length > 0) ...[
 
                           ///Recently Viewed Products List
                           Observer(builder: (_) {
@@ -626,6 +626,7 @@ class _CartScreenState extends State<CartScreen> {
                               ],
                             );
                           })
+ ],
                       ],
                     ],
                   ),
