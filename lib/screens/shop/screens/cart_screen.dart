@@ -627,7 +627,6 @@ class _CartScreenState extends State<CartScreen> {
                             );
                           })
  ],
-                      ],
                     ],
                   ),
                 ).visible(!cartScreenVars.isError && !shopStore.isLoading && cartScreenVars.cartItemList.isNotEmpty),
