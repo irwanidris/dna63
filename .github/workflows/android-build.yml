@@ -28,6 +28,12 @@ jobs:
       - name: Get dependencies
         run: flutter pub get
 
+      - name: Clean Gradle locks
+        run: |
+          pkill -f "gradle" || true
+          rm -rf android/.gradle
+          rm -rf ~/.gradle/caches
+
       - name: Clean build
         run: flutter clean
 
