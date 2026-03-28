@@ -114,7 +114,7 @@ dependency_overrides:
   csslib: ^1.0.2
   collection: ^1.19.1
   meta: ^1.16.0
-  video_player: ^2.9.5
+  video_player: 2.9.2  # Pinned: 2.10+ requires Flutter 3.29+/Dart 3.7
 
 flutter:
   uses-material-design: true
