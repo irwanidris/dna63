@@ -7,6 +7,10 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+env:
+  GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx4g -Dorg.gradle.daemon=false"
+  JAVA_OPTS: "-Xmx4g"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,6 +43,8 @@ jobs:
 
       - name: Build APK (verbose)
         run: flutter build apk --release --verbose 2>&1 | head -200
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx4g -Dorg.gradle.daemon=false"
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
@@ -48,6 +54,8 @@ jobs:
 
       - name: Build AAB (for Play Store)
         run: flutter build appbundle --release
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx4g -Dorg.gradle.daemon=false"
 
       - name: Upload AAB
         uses: actions/upload-artifact@v4
