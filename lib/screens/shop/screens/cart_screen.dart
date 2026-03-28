@@ -575,7 +575,6 @@ class _CartScreenState extends State<CartScreen> {
                               ).center()
                             : Offstage(),
                       ],
-                      ],
                       16.height,
 
                         ///Related products List
@@ -625,7 +624,7 @@ class _CartScreenState extends State<CartScreen> {
                                 ),
                               ],
                             );
-                          })
+                          }),
  ],
                     ],
                   ),

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart' show SfPdfViewer;
 
 class PDFScreen extends StatefulWidget {
   final String docURl;
-
   const PDFScreen({required this.docURl});
 
   @override
@@ -22,7 +20,9 @@ class _PDFScreenState extends State<PDFScreen> {
         elevation: 0,
         centerTitle: true,
       ),
-      body: SfPdfViewer.network(widget.docURl),
+      body: Center(
+        child: Text('PDF Viewer temporarily unavailable', style: secondaryTextStyle()),
+      ),
     );
   }
 }
