@@ -25,7 +25,11 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> init() async {
-    generalSettings();
+    try {
+      generalSettings();
+    } catch (e) {
+      log('Splash: generalSettings error: $e');
+    }
     afterBuildCreated(() async {
       appStore.setLanguage(getStringAsync(SharePreferencesKey.LANGUAGE, defaultValue: Constants.defaultLanguage));
 
