@@ -77,12 +77,17 @@ void main() async {
 //       rethrow;
 //     }
 //   }
-// 
-// 
+//
+//
 //   PushNotificationService().initFirebaseMessaging();
 //   MobileAds.instance.initialize();
 //   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
-  await initialize(aLocaleLanguageList: languageList());
+  try {
+    await initialize(aLocaleLanguageList: languageList());
+    log("MAIN: initialize success");
+  } catch (e, stack) {
+    log("MAIN ERROR: initialize failed: $e");
+  }
 
   defaultRadius = 32.0;
   defaultAppButtonRadius = 12;
@@ -113,49 +118,71 @@ class _MyAppState extends State<MyApp> {
 
   void init() async {
     afterBuildCreated(() async {
-      int themeModeIndex = getIntAsync(SharePreferencesKey.APP_THEME, defaultValue: AppThemeMode.ThemeModeSystem);
-      if (themeModeIndex == AppThemeMode.ThemeModeLight || (themeModeIndex == AppThemeMode.ThemeModeSystem && MediaQuery.of(context).platformBrightness == Brightness.light)) {
+      int themeModeIndex = getIntAsync(SharePreferencesKey.APP_THEME,
+          defaultValue: AppThemeMode.ThemeModeSystem);
+      if (themeModeIndex == AppThemeMode.ThemeModeLight ||
+          (themeModeIndex == AppThemeMode.ThemeModeSystem &&
+              MediaQuery.of(context).platformBrightness == Brightness.light)) {
         appStore.toggleDarkMode(value: false, isFromMain: true);
       } else {
         appStore.toggleDarkMode(value: true, isFromMain: true);
       }
       appStore.setDashboardIndex(0);
 
-      await appStore.setLoggedIn(getBoolAsync(SharePreferencesKey.IS_LOGGED_IN));
+      await appStore
+          .setLoggedIn(getBoolAsync(SharePreferencesKey.IS_LOGGED_IN));
       if (appStore.isLoggedIn) {
         userStore.setToken(getStringAsync(SharePreferencesKey.TOKEN));
-        userStore.setLoginEmail(getStringAsync(SharePreferencesKey.LOGIN_EMAIL));
-        userStore.setLoginName(getStringAsync(SharePreferencesKey.LOGIN_DISPLAY_NAME));
-        userStore.setLoginFullName(getStringAsync(SharePreferencesKey.LOGIN_FULL_NAME));
-        userStore.setLoginUserId(getStringAsync(SharePreferencesKey.LOGIN_USER_ID));
-        userStore.setLoginAvatarUrl(getStringAsync(SharePreferencesKey.LOGIN_AVATAR_URL));
+        userStore
+            .setLoginEmail(getStringAsync(SharePreferencesKey.LOGIN_EMAIL));
+        userStore.setLoginName(
+            getStringAsync(SharePreferencesKey.LOGIN_DISPLAY_NAME));
+        userStore.setLoginFullName(
+            getStringAsync(SharePreferencesKey.LOGIN_FULL_NAME));
+        userStore
+            .setLoginUserId(getStringAsync(SharePreferencesKey.LOGIN_USER_ID));
+        userStore.setLoginAvatarUrl(
+            getStringAsync(SharePreferencesKey.LOGIN_AVATAR_URL));
 
-        appStore.setVerificationStatus(getStringAsync(SharePreferencesKey.VERIFICATION_STATUS));
+        appStore.setVerificationStatus(
+            getStringAsync(SharePreferencesKey.VERIFICATION_STATUS));
         appStore.setNonce(getStringAsync(SharePreferencesKey.NONCE));
-        messageStore.setBmSecretKey(getStringAsync(SharePreferencesKey.BM_SECRET_KEY));
+        messageStore
+            .setBmSecretKey(getStringAsync(SharePreferencesKey.BM_SECRET_KEY));
 
-        messageStore.setUserNameKey(getStringAsync(SharePreferencesKey.USERNAME_KEY));
-        messageStore.setUserAvatarKey(getStringAsync(SharePreferencesKey.USER_AVATAR_KEY));
+        messageStore
+            .setUserNameKey(getStringAsync(SharePreferencesKey.USERNAME_KEY));
+        messageStore.setUserAvatarKey(
+            getStringAsync(SharePreferencesKey.USER_AVATAR_KEY));
 
-        pmpStore.setPmpMembership(getStringAsync(SharePreferencesKey.PMP_MEMBERSHIP));
+        pmpStore.setPmpMembership(
+            getStringAsync(SharePreferencesKey.PMP_MEMBERSHIP));
 
         /// in-app purchase keys
-        appStore.setInAppSubscription(getBoolAsync(SharePreferencesKey.hasInAppSubscription));
-        appStore.setInAppActiveSubscription(getStringAsync(SharePreferencesKey.inAppActiveSubscription));
-        appStore.setFreeSubscription(getBoolAsync(SharePreferencesKey.freeSubscription));
-        appStore.setInAppEntitlementID(getStringAsync(SharePreferencesKey.entitlement_id));
-        appStore.setInAppGoogleApiKey(getStringAsync(SharePreferencesKey.google_api_key));
-        appStore.setInAppAppleApiKey(getStringAsync(SharePreferencesKey.apple_api_key));
+        appStore.setInAppSubscription(
+            getBoolAsync(SharePreferencesKey.hasInAppSubscription));
+        appStore.setInAppActiveSubscription(
+            getStringAsync(SharePreferencesKey.inAppActiveSubscription));
+        appStore.setFreeSubscription(
+            getBoolAsync(SharePreferencesKey.freeSubscription));
+        appStore.setInAppEntitlementID(
+            getStringAsync(SharePreferencesKey.entitlement_id));
+        appStore.setInAppGoogleApiKey(
+            getStringAsync(SharePreferencesKey.google_api_key));
+        appStore.setInAppAppleApiKey(
+            getStringAsync(SharePreferencesKey.apple_api_key));
 
         checkApiCallIsWithinTimeSpan(
           callback: () {
             getNonce().then((v) {
               appStore.setNonce(v.storeApiNonce.validate());
-              setValue(SharePreferencesKey.lastTimeWoocommerceNonceGenerated, DateTime.now().millisecondsSinceEpoch);
+              setValue(SharePreferencesKey.lastTimeWoocommerceNonceGenerated,
+                  DateTime.now().millisecondsSinceEpoch);
             });
           },
           duration: Duration(hours: 12),
-          sharePreferencesKey: SharePreferencesKey.lastTimeWoocommerceNonceGenerated,
+          sharePreferencesKey:
+              SharePreferencesKey.lastTimeWoocommerceNonceGenerated,
         );
       }
       appStore.reactions = getReactionsList();
@@ -169,9 +196,12 @@ class _MyAppState extends State<MyApp> {
       appStore.emojiList = getCachedEmojiList();
       appStore.achievementEndPoints = getCachedGamipressAchievementEndpoints();
 
-      appStore.setFilterContent(getBoolAsync(SharePreferencesKey.FILTER_CONTENT, defaultValue: true));
-      if (getMemberListPref().isNotEmpty) searchFragStore.recentMemberSearchList.addAll(getMemberListPref());
-      if (getGroupListPref().isNotEmpty) searchFragStore.recentGroupsSearchList.addAll(getGroupListPref());
+      appStore.setFilterContent(
+          getBoolAsync(SharePreferencesKey.FILTER_CONTENT, defaultValue: true));
+      if (getMemberListPref().isNotEmpty)
+        searchFragStore.recentMemberSearchList.addAll(getMemberListPref());
+      if (getGroupListPref().isNotEmpty)
+        searchFragStore.recentGroupsSearchList.addAll(getGroupListPref());
 
       if (getLmsQuizListPref().isNotEmpty) {
         lmsStore.quizList.addAll(getLmsQuizListPref());
@@ -208,7 +238,8 @@ class _MyAppState extends State<MyApp> {
             GlobalCupertinoLocalizations.delegate,
           ],
           localeResolutionCallback: (locale, supportedLocales) => locale,
-          locale: Locale(appStore.selectedLanguage.validate(value: Constants.defaultLanguage)),
+          locale: Locale(appStore.selectedLanguage
+              .validate(value: Constants.defaultLanguage)),
           onGenerateRoute: (settings) {
             if (settings.name.validate().split('/').last.isDigit()) {
               return MaterialPageRoute(
@@ -228,7 +259,8 @@ class _MyAppState extends State<MyApp> {
 
 class MyBehavior extends ScrollBehavior {
   @override
-  Widget buildOverscrollIndicator(BuildContext context, Widget child, ScrollableDetails details) {
+  Widget buildOverscrollIndicator(
+      BuildContext context, Widget child, ScrollableDetails details) {
     return child;
   }
 }
