@@ -70,8 +70,8 @@ android {
         }
 
         release {
-            // Use debug signing for CI builds (no keystore required)
-            signingConfig keystorePropertiesFile.exists() ? signingConfigs.release : signingConfigs.debug
+            // Use debug signing (no keystore required for CI)
+            signingConfig signingConfigs.debug
             // Disable minification - R8 causes OutOfMemoryError on large apps
             minifyEnabled false
             shrinkResources false
