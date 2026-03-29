@@ -72,9 +72,9 @@ android {
         release {
             // Use debug signing for CI builds (no keystore required)
             signingConfig keystorePropertiesFile.exists() ? signingConfigs.release : signingConfigs.debug
-            // Disable minification for CI builds (R8 OutOfMemoryError)
-            minifyEnabled keystorePropertiesFile.exists()
-            shrinkResources keystorePropertiesFile.exists()
+            // Disable minification - R8 causes OutOfMemoryError on large apps
+            minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
