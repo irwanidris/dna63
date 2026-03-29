@@ -66,22 +66,22 @@ String currentPackageName = '';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  try {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-  } on FirebaseException catch (e) {
-    if (e.code == 'duplicate-app') {
-      // Already initialized — ignore
-    } else {
-      rethrow;
-    }
-  }
-
-
-  PushNotificationService().initFirebaseMessaging();
-  MobileAds.instance.initialize();
-  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+//   try {
+//     await Firebase.initializeApp(
+//       options: DefaultFirebaseOptions.currentPlatform,
+//     );
+//   } on FirebaseException catch (e) {
+//     if (e.code == 'duplicate-app') {
+//       // Already initialized — ignore
+//     } else {
+//       rethrow;
+//     }
+//   }
+// 
+// 
+//   PushNotificationService().initFirebaseMessaging();
+//   MobileAds.instance.initialize();
+//   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
   await initialize(aLocaleLanguageList: languageList());
 
   defaultRadius = 32.0;
