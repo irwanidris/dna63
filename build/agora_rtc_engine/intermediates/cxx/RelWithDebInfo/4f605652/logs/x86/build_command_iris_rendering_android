@@ -1,4 +1,0 @@
-/data/.openclaw/workspace/tools/android-sdk/cmake/3.22.1/bin/ninja \
-  -C \
-  /data/.pub-cache/hosted/pub.dev/agora_rtc_engine-6.5.3/android/.cxx/RelWithDebInfo/4f605652/x86 \
-  iris_rendering_android

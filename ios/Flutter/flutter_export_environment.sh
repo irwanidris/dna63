@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
 export "FLUTTER_ROOT=/data/.openclaw/workspace/flutter_sdk"
-export "FLUTTER_APPLICATION_PATH=/data/.openclaw/workspace/socialv"
+export "FLUTTER_APPLICATION_PATH=/data/.openclaw/workspace/dna63"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"

@@ -1004,7 +1004,6 @@ HSPLandroidx/collection/MutableIntIntMap;->put(III)I
 HSPLandroidx/collection/MutableIntIntMap;->putAll(Landroidx/collection/IntIntMap;)V
 HSPLandroidx/collection/MutableIntIntMap;->remove(I)V
 HSPLandroidx/collection/MutableIntIntMap;->remove(II)Z
-HSPLandroidx/collection/MutableIntIntMap;->removeDeletedMarkers()V
 HSPLandroidx/collection/MutableIntIntMap;->removeIf(Lkotlin/jvm/functions/Function2;)V
 HSPLandroidx/collection/MutableIntIntMap;->removeValueAt(I)V
 HSPLandroidx/collection/MutableIntIntMap;->resizeStorage(I)V
@@ -1046,7 +1045,6 @@ HSPLandroidx/collection/MutableObjectIntMap;->put(Ljava/lang/Object;II)I
 HSPLandroidx/collection/MutableObjectIntMap;->putAll(Landroidx/collection/ObjectIntMap;)V
 HSPLandroidx/collection/MutableObjectIntMap;->remove(Ljava/lang/Object;)V
 HSPLandroidx/collection/MutableObjectIntMap;->remove(Ljava/lang/Object;I)Z
-HSPLandroidx/collection/MutableObjectIntMap;->removeDeletedMarkers()V
 HSPLandroidx/collection/MutableObjectIntMap;->removeIf(Lkotlin/jvm/functions/Function2;)V
 HSPLandroidx/collection/MutableObjectIntMap;->removeValueAt(I)V
 HSPLandroidx/collection/MutableObjectIntMap;->resizeStorage(I)V
@@ -1102,7 +1100,6 @@ HSPLandroidx/collection/MutableScatterMap;->putAll(Lkotlin/sequences/Sequence;)V
 HSPLandroidx/collection/MutableScatterMap;->putAll([Lkotlin/Pair;)V
 HSPLandroidx/collection/MutableScatterMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 HSPLandroidx/collection/MutableScatterMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
-HSPLandroidx/collection/MutableScatterMap;->removeDeletedMarkers()V
 HSPLandroidx/collection/MutableScatterMap;->removeIf(Lkotlin/jvm/functions/Function2;)V
 HSPLandroidx/collection/MutableScatterMap;->removeValueAt(I)Ljava/lang/Object;
 HSPLandroidx/collection/MutableScatterMap;->resizeStorage(I)V
@@ -1168,7 +1165,6 @@ HSPLandroidx/collection/MutableScatterSet;->removeAll(Landroidx/collection/Scatt
 HSPLandroidx/collection/MutableScatterSet;->removeAll(Ljava/lang/Iterable;)Z
 HSPLandroidx/collection/MutableScatterSet;->removeAll(Lkotlin/sequences/Sequence;)Z
 HSPLandroidx/collection/MutableScatterSet;->removeAll([Ljava/lang/Object;)Z
-HSPLandroidx/collection/MutableScatterSet;->removeDeletedMarkers()V
 HSPLandroidx/collection/MutableScatterSet;->removeElementAt(I)V
 HSPLandroidx/collection/MutableScatterSet;->removeIf(Lkotlin/jvm/functions/Function1;)V
 HSPLandroidx/collection/MutableScatterSet;->resizeStorage(I)V

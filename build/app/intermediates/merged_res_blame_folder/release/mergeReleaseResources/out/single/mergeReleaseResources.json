@@ -9,11 +9,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_toast_custom.xml.flat",
-        "source": "com.iconic.socialv.app-release-162:/layout/toast_custom.xml"
+        "source": "com.iconic.socialv.app-release-161:/layout/toast_custom.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_card.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_card.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_card.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/mipmap-xhdpi_ic_launcher_monochrome.png.flat",
@@ -37,7 +37,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/anim_stripe_3ds2_challenge_transition_slide_in.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/anim/stripe_3ds2_challenge_transition_slide_in.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/anim/stripe_3ds2_challenge_transition_slide_in.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_abc_activity_chooser_view.xml.flat",
@@ -50,6 +50,10 @@
     {
         "merged": "com.iconic.socialv.app-release-146:/anim_btn_radio_to_off_mtrl_ring_outer_path_animation.xml.flat",
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_ic_call_answer.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxhdpi-v4/ic_call_answer.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/animator-v21_design_appbar_state_list_animator.xml.flat",
@@ -73,11 +77,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-night-v8_stripe_ic_paymentsheet_pm_revolut_pay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable-night-v8/stripe_ic_paymentsheet_pm_revolut_pay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable-night-v8/stripe_ic_paymentsheet_pm_revolut_pay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/raw_firebase_common_keep.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-firebase-common-21.0.0-51:/raw/firebase_common_keep.xml"
+        "source": "com.iconic.socialv.app-jetified-firebase-common-21.0.0-50:/raw/firebase_common_keep.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_mtrl_calendar_item_stroke_color.xml.flat",
@@ -92,12 +96,16 @@
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable/abc_ic_search_api_material.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_ic_call_decline.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxhdpi-v4/ic_call_decline.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_unknown.xml.flat",
         "source": "com.iconic.socialv.app-jetified-payments-model-21.6.0-100:/drawable/stripe_ic_unknown.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_fct_ic_arrow_back.xml.flat",
-        "source": "com.iconic.socialv.app-release-158:/drawable/fct_ic_arrow_back.xml"
+        "source": "com.iconic.socialv.app-release-157:/drawable/fct_ic_arrow_back.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_panel_arrow_right.xml.flat",
@@ -126,6 +134,10 @@
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-v23_mtrl_popupmenu_background_overlay.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/drawable-v23/mtrl_popupmenu_background_overlay.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-ldpi-v4_ic_call_answer_video.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-ldpi-v4/ic_call_answer_video.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color-v31_m3_ref_palette_dynamic_neutral22.xml.flat",
@@ -257,7 +269,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/raw_keep.xml.flat",
-        "source": "com.iconic.socialv.app-release-158:/raw/keep.xml"
+        "source": "com.iconic.socialv.app-release-157:/raw/keep.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_abc_alert_dialog_title_material.xml.flat",
@@ -277,7 +289,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_notification_template_big_media_custom.xml.flat",
-        "source": "com.iconic.socialv.app-media-1.7.0-55:/layout/notification_template_big_media_custom.xml"
+        "source": "com.iconic.socialv.app-media-1.7.0-54:/layout/notification_template_big_media_custom.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color-v23_abc_btn_colored_borderless_text_material.xml.flat",
@@ -300,12 +312,16 @@
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable/abc_btn_check_material_anim.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-ldpi-v4_ic_call_answer_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-ldpi-v4/ic_call_answer_low.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable_btn_checkbox_checked_to_unchecked_mtrl_animation.xml.flat",
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_notification_template_part_time.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/layout/notification_template_part_time.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/layout/notification_template_part_time.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_text_button_background_color_selector.xml.flat",
@@ -313,7 +329,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_satispay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_satispay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_satispay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_slider_thumb_color.xml.flat",
@@ -352,6 +368,10 @@
         "source": "com.iconic.socialv.app-preference-1.2.1-130:/layout/preference_dropdown_material.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-anydpi-v21_ic_call_answer_low.xml.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-anydpi-v21/ic_call_answer_low.xml"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_google_pay_mark.xml.flat",
         "source": "com.iconic.socialv.app-jetified-paymentsheet-21.6.0-116:/drawable/stripe_google_pay_mark.xml"
     },
@@ -369,11 +389,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_3ds2_ic_cartesbancaires.png.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/drawable/stripe_3ds2_ic_cartesbancaires.png"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/drawable/stripe_3ds2_ic_cartesbancaires.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_activity_card_scan.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/layout/stripe_activity_card_scan.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/layout/stripe_activity_card_scan.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/raw_com_android_billingclient_heterodyne_info.flat",
@@ -385,7 +405,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-night-v8_stripe_ic_paymentsheet_pm_satispay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable-night-v8/stripe_ic_paymentsheet_pm_satispay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable-night-v8/stripe_ic_paymentsheet_pm_satispay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_link_chevron.xml.flat",
@@ -393,7 +413,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_react_native_google_pay_button.xml.flat",
-        "source": "com.iconic.socialv.app-release-176:/layout/stripe_react_native_google_pay_button.xml"
+        "source": "com.iconic.socialv.app-release-175:/layout/stripe_react_native_google_pay_button.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_abc_search_view.xml.flat",
@@ -417,7 +437,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/interpolator-v21_m3_sys_motion_easing_emphasized_decelerate.xml.flat",
@@ -496,12 +516,16 @@
         "source": "com.iconic.socialv.app-material-1.12.0-14:/color-v31/m3_ref_palette_dynamic_neutral96.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-anydpi-v21_ic_call_answer_video.xml.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-anydpi-v21/ic_call_answer_video.xml"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable-v23_m3_tabs_transparent_background.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/drawable-v23/m3_tabs_transparent_background.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_challenge_activity.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout/stripe_challenge_activity.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout/stripe_challenge_activity.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_rzp_border.xml.flat",
@@ -577,7 +601,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_mobile_pay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_mobile_pay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_mobile_pay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_abc_action_mode_close_item_material.xml.flat",
@@ -613,7 +637,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_oxxo.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_oxxo.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_oxxo.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/animator_mtrl_fab_hide_motion_spec.xml.flat",
@@ -621,7 +645,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-xhdpi-v4/notification_bg_normal.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_card_brand_view.xml.flat",
@@ -653,11 +677,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_notification_bg_low.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable/notification_bg_low.xml"
-    },
-    {
-        "merged": "com.iconic.socialv.app-release-146:/drawable_ic_call_decline.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable/ic_call_decline.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable/notification_bg_low.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
@@ -677,11 +697,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_bancontact.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_bancontact.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_bancontact.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_grabpay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_grabpay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_grabpay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color-v31_m3_ref_palette_dynamic_neutral_variant22.xml.flat",
@@ -705,11 +725,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_3ds2_ic_mastercard.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/drawable/stripe_3ds2_ic_mastercard.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/drawable/stripe_3ds2_ic_mastercard.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_mtrl_picker_header_fullscreen.xml.flat",
@@ -725,7 +745,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/xml_flutter_image_picker_file_paths.xml.flat",
-        "source": "com.iconic.socialv.app-release-165:/xml/flutter_image_picker_file_paths.xml"
+        "source": "com.iconic.socialv.app-release-164:/xml/flutter_image_picker_file_paths.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-ldpi-v4_ic_password.png.flat",
@@ -749,7 +769,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
@@ -781,7 +801,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-night-v8_stripe_ic_paymentsheet_pm_crypto.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable-night-v8/stripe_ic_paymentsheet_pm_crypto.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable-night-v8/stripe_ic_paymentsheet_pm_crypto.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_common_google_signin_btn_text_dark_focused.xml.flat",
@@ -801,7 +821,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_fpx.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_fpx.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_fpx.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -841,7 +861,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_sepa_debit.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_sepa_debit.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_sepa_debit.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_text_button_ripple_color_selector.xml.flat",
@@ -849,7 +869,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_3ds2_ic_unionpay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/drawable/stripe_3ds2_ic_unionpay.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/drawable/stripe_3ds2_ic_unionpay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_btn_radio_off_to_on_mtrl_animation.xml.flat",
@@ -857,11 +877,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_wallet_secondary_text_holo_dark.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/color/wallet_secondary_text_holo_dark.xml"
-    },
-    {
-        "merged": "com.iconic.socialv.app-release-146:/drawable_ic_call_answer_low.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable/ic_call_answer_low.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/color/wallet_secondary_text_holo_dark.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/interpolator_btn_checkbox_unchecked_mtrl_animation_interpolator_0.xml.flat",
@@ -897,7 +913,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_chrome_custom_tabs_layout.xml.flat",
-        "source": "com.iconic.socialv.app-release-159:/layout/chrome_custom_tabs_layout.xml"
+        "source": "com.iconic.socialv.app-release-158:/layout/chrome_custom_tabs_layout.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_popupmenu_overlay_color.xml.flat",
@@ -909,7 +925,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/anim_stripe_3ds2_challenge_transition_slide_out.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/anim/stripe_3ds2_challenge_transition_slide_out.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/anim/stripe_3ds2_challenge_transition_slide_out.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_unionpay.xml.flat",
@@ -921,7 +937,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_cash_app_pay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_cash_app_pay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_cash_app_pay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_mtrl_switch_track_decoration.xml.flat",
@@ -937,7 +953,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_photo_camera.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_photo_camera.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_photo_camera.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_rzp_logo.png.flat",
@@ -965,15 +981,19 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-mdpi-v4/notification_bg_normal.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_gnt_small_template_view.xml.flat",
-        "source": "com.iconic.socialv.app-release-163:/layout/gnt_small_template_view.xml"
+        "source": "com.iconic.socialv.app-release-162:/layout/gnt_small_template_view.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_bank_svb.xml.flat",
         "source": "com.iconic.socialv.app-jetified-payments-core-21.6.0-98:/drawable/stripe_ic_bank_svb.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-anydpi-v21_ic_call_answer.xml.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-anydpi-v21/ic_call_answer.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_mtrl_switch_thumb_unchecked_pressed.xml.flat",
@@ -981,7 +1001,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_gpay_logo_generic_dark.png.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable-xhdpi-v4/gpay_logo_generic_dark.png"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable-xhdpi-v4/gpay_logo_generic_dark.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_card_amex_night.xml.flat",
@@ -1029,7 +1049,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_notification_template_big_media.xml.flat",
-        "source": "com.iconic.socialv.app-media-1.7.0-55:/layout/notification_template_big_media.xml"
+        "source": "com.iconic.socialv.app-media-1.7.0-54:/layout/notification_template_big_media.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_mtrl_calendar_day_of_week.xml.flat",
@@ -1045,7 +1065,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_gpay_logo_generic_dark.png.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable-xxhdpi-v4/gpay_logo_generic_dark.png"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable-xxhdpi-v4/gpay_logo_generic_dark.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_preference_widget_seekbar.xml.flat",
@@ -1088,6 +1108,10 @@
         "source": "com.iconic.socialv.app-material-1.12.0-14:/color/m3_switch_thumb_tint.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxxhdpi-v4_ic_call_answer.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxxhdpi-v4/ic_call_answer.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/color_mtrl_on_primary_text_btn_text_color_selector.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/color/mtrl_on_primary_text_btn_text_color_selector.xml"
     },
@@ -1113,7 +1137,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_revolut_pay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_revolut_pay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_revolut_pay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_material_slider_inactive_tick_marks_color.xml.flat",
@@ -1149,7 +1173,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_upi.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_upi.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_upi.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/anim_linear_indeterminate_line2_head_interpolator.xml.flat",
@@ -1161,7 +1185,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_abc_list_selector_background_transition_holo_light.xml.flat",
@@ -1177,7 +1201,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_3ds2_ic_unknown.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/drawable/stripe_3ds2_ic_unknown.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/drawable/stripe_3ds2_ic_unknown.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_abc_alert_dialog_material.xml.flat",
@@ -1197,7 +1221,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_gpay_logo_generic_light.png.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable-xxhdpi-v4/gpay_logo_generic_light.png"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable-xxhdpi-v4/gpay_logo_generic_light.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/mipmap-hdpi_ic_launcher.webp.flat",
@@ -1212,12 +1236,16 @@
         "source": "com.iconic.socialv.app-jetified-payments-core-21.6.0-98:/drawable/stripe_ic_add_black_32dp.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_ic_call_answer_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/ic_call_answer_low.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "com.iconic.socialv.app-jetified-play-services-base-18.5.0-119:/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_affirm_logo.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_affirm_logo.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_affirm_logo.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_abc_hint_foreground_material_dark.xml.flat",
@@ -1225,11 +1253,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_admob_close_button_white_cross.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-ads-24.1.0-41:/drawable/admob_close_button_white_cross.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-ads-23.6.0-71:/drawable/admob_close_button_white_cross.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_challenge_zone_multi_select_view.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout/stripe_challenge_zone_multi_select_view.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout/stripe_challenge_zone_multi_select_view.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_indeterminate_static.xml.flat",
@@ -1237,7 +1265,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_notification_template_big_media_narrow_custom.xml.flat",
-        "source": "com.iconic.socialv.app-media-1.7.0-55:/layout/notification_template_big_media_narrow_custom.xml"
+        "source": "com.iconic.socialv.app-media-1.7.0-54:/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_abc_action_menu_item_layout.xml.flat",
@@ -1245,7 +1273,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_notification_template_media.xml.flat",
-        "source": "com.iconic.socialv.app-media-1.7.0-55:/layout/notification_template_media.xml"
+        "source": "com.iconic.socialv.app-media-1.7.0-54:/layout/notification_template_media.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_mtrl_choice_chip_ripple_color.xml.flat",
@@ -1277,7 +1305,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_ic_call_decline.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xhdpi-v4/ic_call_decline.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_abc_ic_voice_search_api_material.xml.flat",
@@ -1298,10 +1330,6 @@
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_m3_bottom_sheet_drag_handle.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/drawable/m3_bottom_sheet_drag_handle.xml"
-    },
-    {
-        "merged": "com.iconic.socialv.app-release-146:/drawable_ic_call_answer_video_low.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable/ic_call_answer_video_low.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
@@ -1329,7 +1357,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_blik.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_blik.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_blik.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_mtrl_picker_header_selection_text.xml.flat",
@@ -1348,16 +1376,16 @@
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_bank_usbank.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-core-21.6.0-98:/drawable/stripe_ic_bank_usbank.xml"
-    },
-    {
         "merged": "com.iconic.socialv.app-release-146:/drawable_material_ic_keyboard_arrow_right_black_24dp.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/drawable/material_ic_keyboard_arrow_right_black_24dp.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_bank_usbank.xml.flat",
+        "source": "com.iconic.socialv.app-jetified-payments-core-21.6.0-98:/drawable/stripe_ic_bank_usbank.xml"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_mtrl_ic_indeterminate.xml.flat",
@@ -1365,7 +1393,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_notification_media_action.xml.flat",
-        "source": "com.iconic.socialv.app-media-1.7.0-55:/layout/notification_media_action.xml"
+        "source": "com.iconic.socialv.app-media-1.7.0-54:/layout/notification_media_action.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/mipmap-mdpi_ic_launcher_background.png.flat",
@@ -1382,6 +1410,10 @@
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_mtrl_checkbox_button_icon_unchecked_checked.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/drawable/mtrl_checkbox_button_icon_unchecked_checked.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxxhdpi-v4_ic_call_answer_video_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxxhdpi-v4/ic_call_answer_video_low.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_add_dark.xml.flat",
@@ -1444,6 +1476,10 @@
         "source": "com.iconic.socialv.app-material-1.12.0-14:/color/m3_simple_item_ripple_color.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_ic_call_decline_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xhdpi-v4/ic_call_decline_low.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable-v23_abc_control_background_material.xml.flat",
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable-v23/abc_control_background_material.xml"
     },
@@ -1461,7 +1497,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_medium_template_view_layout.xml.flat",
-        "source": "com.iconic.socialv.app-release-163:/layout/medium_template_view_layout.xml"
+        "source": "com.iconic.socialv.app-release-162:/layout/medium_template_view_layout.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_mtrl_tabs_colored_ripple_color.xml.flat",
@@ -1481,11 +1517,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout-v21_notification_template_icon_group.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/layout-v21/notification_template_icon_group.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/layout-v21/notification_template_icon_group.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_paybutton_generic.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/layout/paybutton_generic.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/layout/paybutton_generic.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/mipmap-xxhdpi_ic_launcher_background.png.flat",
@@ -1513,7 +1549,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_3ds2_ic_visa.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/drawable/stripe_3ds2_ic_visa.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/drawable/stripe_3ds2_ic_visa.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_mtrl_search_bar.xml.flat",
@@ -1573,11 +1609,15 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_notification_icon_background.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable/notification_icon_background.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_ic_call_answer_video_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-mdpi-v4/ic_call_answer_video_low.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_notification_template_lines_media.xml.flat",
-        "source": "com.iconic.socialv.app-media-1.7.0-55:/layout/notification_template_lines_media.xml"
+        "source": "com.iconic.socialv.app-media-1.7.0-54:/layout/notification_template_lines_media.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_abc_star_black_48dp.xml.flat",
@@ -1609,7 +1649,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_m3_avd_hide_password.xml.flat",
@@ -1633,23 +1673,27 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_notification_template_big_media_narrow.xml.flat",
-        "source": "com.iconic.socialv.app-media-1.7.0-55:/layout/notification_template_big_media_narrow.xml"
+        "source": "com.iconic.socialv.app-media-1.7.0-54:/layout/notification_template_big_media_narrow.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_mtrl_search_view.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/layout/mtrl_search_view.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_ic_call_decline.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-mdpi-v4/ic_call_decline.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_challenge_submit_dialog.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout/stripe_challenge_submit_dialog.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout/stripe_challenge_submit_dialog.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/xml_flutter_share_file_paths.xml.flat",
-        "source": "com.iconic.socialv.app-release-173:/xml/flutter_share_file_paths.xml"
+        "source": "com.iconic.socialv.app-release-172:/xml/flutter_share_file_paths.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_admob_empty_layout.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-ads-api-24.1.0-39:/layout/admob_empty_layout.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-ads-lite-23.6.0-45:/layout/admob_empty_layout.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_material_on_primary_emphasis_medium.xml.flat",
@@ -1689,7 +1733,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-mdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_abc_secondary_text_material_light.xml.flat",
@@ -1741,7 +1785,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_konbini.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_konbini.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_konbini.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -1865,7 +1909,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_zip.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_zip.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_zip.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_abc_action_bar_up_container.xml.flat",
@@ -1888,6 +1932,10 @@
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable-xhdpi-v4/abc_text_select_handle_left_mtrl.png"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxxhdpi-v4_ic_call_decline.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxxhdpi-v4/ic_call_decline.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/animator_mtrl_fab_transformation_sheet_collapse_spec.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/animator/mtrl_fab_transformation_sheet_collapse_spec.xml"
     },
@@ -1901,11 +1949,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_offline_dialog_default_icon_42dp.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-ads-24.1.0-41:/drawable/offline_dialog_default_icon_42dp.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-ads-23.6.0-71:/drawable/offline_dialog_default_icon_42dp.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_gpay_logo_generic_light.png.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable-mdpi-v4/gpay_logo_generic_light.png"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable-mdpi-v4/gpay_logo_generic_light.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/anim_btn_radio_to_on_mtrl_dot_group_animation.xml.flat",
@@ -2017,7 +2065,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_challenge_zone_single_select_view.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout/stripe_challenge_zone_single_select_view.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout/stripe_challenge_zone_single_select_view.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_abc_cascading_menu_item_layout.xml.flat",
@@ -2061,7 +2109,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_multibanco.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_multibanco.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_multibanco.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_mtrl_tabs_legacy_text_color_selector.xml.flat",
@@ -2149,7 +2197,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_paypal.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_paypal.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_paypal.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -2157,7 +2205,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_ideal.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_ideal.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_ideal.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-v21_abc_edit_text_material.xml.flat",
@@ -2165,7 +2213,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout-v21_notification_template_custom_big.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/layout-v21/notification_template_custom_big.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/layout-v21/notification_template_custom_big.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_mtrl_calendar_year.xml.flat",
@@ -2173,7 +2221,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/animator_fragment_fade_exit.xml.flat",
-        "source": "com.iconic.socialv.app-fragment-1.8.6-60:/animator/fragment_fade_exit.xml"
+        "source": "com.iconic.socialv.app-fragment-1.8.6-59:/animator/fragment_fade_exit.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_design_navigation_menu_item.xml.flat",
@@ -2201,7 +2249,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_pay_button_generic_background_dark.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable/pay_button_generic_background_dark.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable/pay_button_generic_background_dark.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_navigation_bar_ripple_color_selector.xml.flat",
@@ -2241,7 +2289,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_challenge_zone_web_view.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout/stripe_challenge_zone_web_view.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout/stripe_challenge_zone_web_view.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/mipmap-xhdpi_ic_launcher.webp.flat",
@@ -2257,7 +2305,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-night-v8_stripe_ic_paymentsheet_pm_alma.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable-night-v8/stripe_ic_paymentsheet_pm_alma.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable-night-v8/stripe_ic_paymentsheet_pm_alma.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_common_google_signin_btn_text_light_normal.xml.flat",
@@ -2280,12 +2328,16 @@
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-anydpi-v21_ic_call_answer_video_low.xml.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-anydpi-v21/ic_call_answer_video_low.xml"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable_ic_mtrl_chip_checked_circle.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/drawable/ic_mtrl_chip_checked_circle.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-v21_notification_action_background.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-v21/notification_action_background.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-v21/notification_action_background.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -2317,7 +2369,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_floating_action_mode_item.xml.flat",
-        "source": "com.iconic.socialv.app-release-159:/layout/floating_action_mode_item.xml"
+        "source": "com.iconic.socialv.app-release-158:/layout/floating_action_mode_item.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -2352,6 +2404,10 @@
         "source": "com.iconic.socialv.app-jetified-credentials-1.2.0-rc01-29:/drawable-hdpi-v4/ic_other_sign_in.png"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_ic_call_decline.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/ic_call_decline.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/layout_mtrl_calendar_day.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/layout/mtrl_calendar_day.xml"
     },
@@ -2361,7 +2417,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_pay_button_generic_background_mask_light.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable/pay_button_generic_background_mask_light.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable/pay_button_generic_background_mask_light.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/anim-v21_design_bottom_sheet_slide_out.xml.flat",
@@ -2369,7 +2425,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_admob_close_button_white_circle_black_cross.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-ads-24.1.0-41:/drawable/admob_close_button_white_circle_black_cross.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-ads-23.6.0-71:/drawable/admob_close_button_white_circle_black_cross.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/anim-v21_m3_bottom_sheet_slide_out.xml.flat",
@@ -2412,12 +2468,16 @@
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable/abc_cab_background_internal_bg.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_ic_call_answer_video.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/ic_call_answer_video.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/anim_abc_slide_in_top.xml.flat",
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/anim/abc_slide_in_top.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/animator_fragment_close_exit.xml.flat",
-        "source": "com.iconic.socialv.app-fragment-1.8.6-60:/animator/fragment_close_exit.xml"
+        "source": "com.iconic.socialv.app-fragment-1.8.6-59:/animator/fragment_close_exit.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/anim-v21_mtrl_bottom_sheet_slide_in.xml.flat",
@@ -2425,7 +2485,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_stripe_info_zone_header_text.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/color/stripe_info_zone_header_text.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/color/stripe_info_zone_header_text.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
@@ -2433,7 +2493,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/animator_fragment_open_exit.xml.flat",
-        "source": "com.iconic.socialv.app-fragment-1.8.6-60:/animator/fragment_open_exit.xml"
+        "source": "com.iconic.socialv.app-fragment-1.8.6-59:/animator/fragment_open_exit.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/anim_btn_radio_to_off_mtrl_ring_outer_animation.xml.flat",
@@ -2444,8 +2504,12 @@
         "source": "com.iconic.socialv.app-main-136:/mipmap-xhdpi/ic_launcher_background.png"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_ic_call_answer_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxhdpi-v4/ic_call_answer_low.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_afterpay_clearpay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_afterpay_clearpay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_afterpay_clearpay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -2465,7 +2529,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/anim-v21_fragment_fast_out_extra_slow_in.xml.flat",
-        "source": "com.iconic.socialv.app-fragment-1.8.6-60:/anim-v21/fragment_fast_out_extra_slow_in.xml"
+        "source": "com.iconic.socialv.app-fragment-1.8.6-59:/anim-v21/fragment_fast_out_extra_slow_in.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_m3_alert_dialog.xml.flat",
@@ -2497,7 +2561,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_notification_template_media_custom.xml.flat",
-        "source": "com.iconic.socialv.app-media-1.7.0-55:/layout/notification_template_media_custom.xml"
+        "source": "com.iconic.socialv.app-media-1.7.0-54:/layout/notification_template_media_custom.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_link_day.xml.flat",
@@ -2573,7 +2637,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_gnt_rounded_corners_shape.xml.flat",
-        "source": "com.iconic.socialv.app-release-163:/drawable/gnt_rounded_corners_shape.xml"
+        "source": "com.iconic.socialv.app-release-162:/drawable/gnt_rounded_corners_shape.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/anim_btn_checkbox_to_unchecked_icon_null_animation.xml.flat",
@@ -2637,7 +2701,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_challenge_fragment.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout/stripe_challenge_fragment.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout/stripe_challenge_fragment.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_mtrl_alert_select_dialog_multichoice.xml.flat",
@@ -2653,7 +2717,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_gnt_outline_shape.xml.flat",
-        "source": "com.iconic.socialv.app-release-163:/drawable/gnt_outline_shape.xml"
+        "source": "com.iconic.socialv.app-release-162:/drawable/gnt_outline_shape.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_ic_search_black_24.xml.flat",
@@ -2661,7 +2725,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/xml_provider_paths.xml.flat",
-        "source": "com.iconic.socialv.app-release-159:/xml/provider_paths.xml"
+        "source": "com.iconic.socialv.app-release-158:/xml/provider_paths.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color-v31_m3_dynamic_dark_default_color_secondary_text.xml.flat",
@@ -2689,11 +2753,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/menu_menu_main.xml.flat",
-        "source": "com.iconic.socialv.app-release-159:/menu/menu_main.xml"
+        "source": "com.iconic.socialv.app-release-158:/menu/menu_main.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_admob_close_button_black_circle_white_cross.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-ads-24.1.0-41:/drawable/admob_close_button_black_circle_white_cross.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-ads-23.6.0-71:/drawable/admob_close_button_black_circle_white_cross.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -2701,7 +2765,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_ime_secondary_split_test_activity.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/layout/ime_secondary_split_test_activity.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/layout/ime_secondary_split_test_activity.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_dark_default_color_primary_text.xml.flat",
@@ -2761,7 +2825,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-hdpi-v4/notification_bg_normal.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_mtrl_btn_stroke_color_selector.xml.flat",
@@ -2780,20 +2844,20 @@
         "source": "com.iconic.socialv.app-material-1.12.0-14:/layout/material_radial_view_group.xml"
     },
     {
-        "merged": "com.iconic.socialv.app-release-146:/drawable_ic_call_answer.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable/ic_call_answer.xml"
-    },
-    {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable-hdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
-        "merged": "com.iconic.socialv.app-release-146:/color-v31_m3_ref_palette_dynamic_neutral94.xml.flat",
-        "source": "com.iconic.socialv.app-material-1.12.0-14:/color-v31/m3_ref_palette_dynamic_neutral94.xml"
+        "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_ic_call_decline_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-mdpi-v4/ic_call_decline_low.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxxhdpi-v4_ic_other_sign_in.png.flat",
         "source": "com.iconic.socialv.app-jetified-credentials-1.2.0-rc01-29:/drawable-xxxhdpi-v4/ic_other_sign_in.png"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/color-v31_m3_ref_palette_dynamic_neutral94.xml.flat",
+        "source": "com.iconic.socialv.app-material-1.12.0-14:/color-v31/m3_ref_palette_dynamic_neutral94.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_radiobutton_ripple_tint.xml.flat",
@@ -2836,6 +2900,10 @@
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable/abc_ic_menu_paste_mtrl_am_alpha.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_ic_call_answer_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-mdpi-v4/ic_call_answer_low.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_hcaptcha_fragment.xml.flat",
         "source": "com.iconic.socialv.app-jetified-hcaptcha-21.6.0-21:/layout/stripe_hcaptcha_fragment.xml"
     },
@@ -2853,7 +2921,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_wallet_test_layout.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/layout/wallet_test_layout.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/layout/wallet_test_layout.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-v21_launch_background.xml.flat",
@@ -2929,7 +2997,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_challenge_zone_text_view.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout/stripe_challenge_zone_text_view.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout/stripe_challenge_zone_text_view.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -2940,8 +3008,16 @@
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxxhdpi-v4_ic_call_answer_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxxhdpi-v4/ic_call_answer_low.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
         "source": "com.iconic.socialv.app-jetified-play-services-base-18.5.0-119:/drawable-xxhdpi-v4/googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_ic_call_answer_video.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xhdpi-v4/ic_call_answer_video.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_design_snackbar_background.xml.flat",
@@ -2997,7 +3073,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout-v21_notification_action_tombstone.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/layout-v21/notification_action_tombstone.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/layout-v21/notification_action_tombstone.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_visa_template_32.xml.flat",
@@ -3021,7 +3097,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_ime_base_split_test_activity.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/layout/ime_base_split_test_activity.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/layout/ime_base_split_test_activity.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_calendar_item_stroke_color.xml.flat",
@@ -3049,7 +3125,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-night-v8_stripe_ic_paymentsheet_pm_mobile_pay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable-night-v8/stripe_ic_paymentsheet_pm_mobile_pay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable-night-v8/stripe_ic_paymentsheet_pm_mobile_pay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_material_slider_halo_color.xml.flat",
@@ -3081,11 +3157,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_floating_action_mode.xml.flat",
-        "source": "com.iconic.socialv.app-release-159:/layout/floating_action_mode.xml"
+        "source": "com.iconic.socialv.app-release-158:/layout/floating_action_mode.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_m3_password_eye.xml.flat",
@@ -3108,6 +3184,10 @@
         "source": "com.iconic.socialv.app-material-1.12.0-14:/color/material_divider_color.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-ldpi-v4_ic_call_decline.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-ldpi-v4/ic_call_decline.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/color_material_cursor_color.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/color/material_cursor_color.xml"
     },
@@ -3120,12 +3200,16 @@
         "source": "com.iconic.socialv.app-main-136:/mipmap-hdpi/ic_launcher_monochrome.png"
     },
     {
-        "merged": "com.iconic.socialv.app-release-146:/drawable_ic_call_decline_low.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable/ic_call_decline_low.xml"
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_ic_call_answer_video.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxhdpi-v4/ic_call_answer_video.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_btn_radio_on_to_off_mtrl_animation.xml.flat",
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable/btn_radio_on_to_off_mtrl_animation.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_ic_call_answer.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xhdpi-v4/ic_call_answer.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_tabs_text_color_secondary.xml.flat",
@@ -3133,7 +3217,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_notification_oversize_large_icon_bg.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-hdpi-v4/notification_oversize_large_icon_bg.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/notification_oversize_large_icon_bg.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_abc_text_select_handle_right_mtrl.png.flat",
@@ -3181,7 +3265,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_pay_button_generic_background_light.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable/pay_button_generic_background_light.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable/pay_button_generic_background_light.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
@@ -3205,7 +3289,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_gpay_logo_generic_light.png.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable-hdpi-v4/gpay_logo_generic_light.png"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable-hdpi-v4/gpay_logo_generic_light.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_preference_material.xml.flat",
@@ -3229,7 +3313,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_toast_bg.xml.flat",
-        "source": "com.iconic.socialv.app-release-162:/drawable/toast_bg.xml"
+        "source": "com.iconic.socialv.app-release-161:/drawable/toast_bg.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_material_timepicker_clock_text_color.xml.flat",
@@ -3268,8 +3352,16 @@
         "source": "com.iconic.socialv.app-jetified-payments-core-21.6.0-98:/drawable/stripe_ic_bank_boa.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_ic_call_answer_video.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-mdpi-v4/ic_call_answer_video.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/layout_small_template_view_layout.xml.flat",
-        "source": "com.iconic.socialv.app-release-163:/layout/small_template_view_layout.xml"
+        "source": "com.iconic.socialv.app-release-162:/layout/small_template_view_layout.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_ic_call_decline_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/ic_call_decline_low.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_tabs_ripple_color.xml.flat",
@@ -3301,7 +3393,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_affirm.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_affirm.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_affirm.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_mtrl_navigation_bar_ripple_color.xml.flat",
@@ -3329,7 +3421,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_offline_dialog_background.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-ads-24.1.0-41:/drawable/offline_dialog_background.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-ads-23.6.0-71:/drawable/offline_dialog_background.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_abc_list_selector_holo_light.xml.flat",
@@ -3357,7 +3449,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_billie.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_billie.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_billie.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_material_clock_display_divider.xml.flat",
@@ -3369,7 +3461,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_activity_web_view.xml.flat",
-        "source": "com.iconic.socialv.app-release-159:/layout/activity_web_view.xml"
+        "source": "com.iconic.socialv.app-release-158:/layout/activity_web_view.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_material_slider_inactive_track_color.xml.flat",
@@ -3381,7 +3473,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_floating_action_mode_shape.xml.flat",
-        "source": "com.iconic.socialv.app-release-159:/drawable/floating_action_mode_shape.xml"
+        "source": "com.iconic.socialv.app-release-158:/drawable/floating_action_mode_shape.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_delete_symbol.xml.flat",
@@ -3393,7 +3485,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_clearpay_logo.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_clearpay_logo.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_clearpay_logo.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_mtrl_error.xml.flat",
@@ -3401,7 +3493,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_alipay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_alipay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_alipay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_material_ic_clear_black_24dp.xml.flat",
@@ -3422,6 +3514,10 @@
     {
         "merged": "com.iconic.socialv.app-release-146:/animator_mtrl_extended_fab_state_list_animator.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/animator/mtrl_extended_fab_state_list_animator.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_ic_call_answer_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xhdpi-v4/ic_call_answer_low.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_mtrl_alert_select_dialog_singlechoice.xml.flat",
@@ -3454,6 +3550,10 @@
     {
         "merged": "com.iconic.socialv.app-release-146:/color_abc_background_cache_hint_selector_material_light.xml.flat",
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/color/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-ldpi-v4_ic_call_decline_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-ldpi-v4/ic_call_decline_low.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_material_timepicker_textinput_display.xml.flat",
@@ -3493,7 +3593,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_notification_bg.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable/notification_bg.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable/notification_bg.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_ic_other_sign_in.png.flat",
@@ -3529,7 +3629,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_3ds2_ic_indicator.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/drawable/stripe_3ds2_ic_indicator.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/drawable/stripe_3ds2_ic_indicator.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_timepicker_secondary_text_button_text_color.xml.flat",
@@ -3565,11 +3665,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_3ds2_ic_arrow.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/drawable/stripe_3ds2_ic_arrow.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/drawable/stripe_3ds2_ic_arrow.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_progress_view_layout.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout/stripe_progress_view_layout.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout/stripe_progress_view_layout.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_country_text_view.xml.flat",
@@ -3577,7 +3677,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color-v31_m3_ref_palette_dynamic_neutral12.xml.flat",
@@ -3617,7 +3717,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_notification_template_part_chronometer.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/layout/notification_template_part_chronometer.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_hint_foreground.xml.flat",
@@ -3661,11 +3761,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_amazon_pay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_amazon_pay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_amazon_pay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_lock.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_lock.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_lock.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_mtrl_ic_arrow_drop_up.xml.flat",
@@ -3700,20 +3800,28 @@
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxxhdpi-v4_ic_call_decline_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxxhdpi-v4/ic_call_decline_low.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/animator_mtrl_card_state_list_anim.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/animator/mtrl_card_state_list_anim.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_eps.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_eps.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_eps.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_timepicker_button_text_color.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/color/m3_timepicker_button_text_color.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_ic_call_answer_video_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxhdpi-v4/ic_call_answer_video_low.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable_pay_button_generic_background_mask_dark.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable/pay_button_generic_background_mask_dark.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable/pay_button_generic_background_mask_dark.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_design_text_input_end_icon.xml.flat",
@@ -3721,7 +3829,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_sunbit.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_sunbit.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_sunbit.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -3765,7 +3873,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_information_zone_view.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout/stripe_information_zone_view.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout/stripe_information_zone_view.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_mtrl_bottomsheet_drag_handle.xml.flat",
@@ -3837,7 +3945,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_notification_media_cancel_action.xml.flat",
-        "source": "com.iconic.socialv.app-media-1.7.0-55:/layout/notification_media_cancel_action.xml"
+        "source": "com.iconic.socialv.app-media-1.7.0-54:/layout/notification_media_cancel_action.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_cvc_amex.xml.flat",
@@ -3853,7 +3961,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_notification_tile_bg.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable/notification_tile_bg.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable/notification_tile_bg.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_material_textinput_timepicker.xml.flat",
@@ -3865,7 +3973,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_3ds2_ic_amex.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/drawable/stripe_3ds2_ic_amex.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/drawable/stripe_3ds2_ic_amex.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_material_slider_active_tick_marks_color.xml.flat",
@@ -3897,7 +4005,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-night-v8_stripe_ic_affirm_logo.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable-night-v8/stripe_ic_affirm_logo.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable-night-v8/stripe_ic_affirm_logo.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -3917,7 +4025,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_custom_dialog.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/layout/custom_dialog.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/layout/custom_dialog.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_efab_ripple_color_selector.xml.flat",
@@ -3933,7 +4041,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout-land_stripe_challenge_zone_view.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout-land/stripe_challenge_zone_view.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout-land/stripe_challenge_zone_view.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -3945,11 +4053,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_p24.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_p24.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_p24.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_gpay_logo_generic_dark.png.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable-hdpi-v4/gpay_logo_generic_dark.png"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable-hdpi-v4/gpay_logo_generic_dark.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_abc_search_url_text.xml.flat",
@@ -3965,7 +4073,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_3ds2_ic_discover.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/drawable/stripe_3ds2_ic_discover.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/drawable/stripe_3ds2_ic_discover.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color-v31_m3_dynamic_highlighted_text.xml.flat",
@@ -3986,6 +4094,10 @@
     {
         "merged": "com.iconic.socialv.app-release-146:/anim_abc_tooltip_exit.xml.flat",
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/anim/abc_tooltip_exit.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_ic_call_answer_video_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/ic_call_answer_video_low.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_design_bottom_sheet_dialog.xml.flat",
@@ -4009,7 +4121,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_wallet_primary_text_holo_light.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/color/wallet_primary_text_holo_light.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/color/wallet_primary_text_holo_light.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/raw_rzp_config_checkout.json.flat",
@@ -4021,7 +4133,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/animator_fragment_close_enter.xml.flat",
-        "source": "com.iconic.socialv.app-fragment-1.8.6-60:/animator/fragment_close_enter.xml"
+        "source": "com.iconic.socialv.app-fragment-1.8.6-59:/animator/fragment_close_enter.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_navigation_rail_item_with_indicator_icon_tint.xml.flat",
@@ -4049,7 +4161,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_bank.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_bank.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_bank.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_abc_search_dropdown_item_icons_2line.xml.flat",
@@ -4057,7 +4169,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_wechat_pay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_wechat_pay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_wechat_pay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_mastercard.xml.flat",
@@ -4093,7 +4205,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_gpay_logo_generic_dark.png.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable-mdpi-v4/gpay_logo_generic_dark.png"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable-mdpi-v4/gpay_logo_generic_dark.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_happy.png.flat",
@@ -4105,7 +4217,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_alma.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_alma.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_alma.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/animator_mtrl_extended_fab_hide_motion_spec.xml.flat",
@@ -4169,7 +4281,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_twint.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_twint.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_twint.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_horizontal_divider.xml.flat",
@@ -4177,7 +4289,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-night-v8_stripe_ic_paymentsheet_pm_billie.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable-night-v8/stripe_ic_paymentsheet_pm_billie.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable-night-v8/stripe_ic_paymentsheet_pm_billie.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-anydpi-v21_ic_call_decline.xml.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-anydpi-v21/ic_call_decline.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_abc_primary_text_material_light.xml.flat",
@@ -4189,7 +4305,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/animator_fragment_open_enter.xml.flat",
-        "source": "com.iconic.socialv.app-fragment-1.8.6-60:/animator/fragment_open_enter.xml"
+        "source": "com.iconic.socialv.app-fragment-1.8.6-59:/animator/fragment_open_enter.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxxhdpi-v4_ic_call_answer_video.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxxhdpi-v4/ic_call_answer_video.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/interpolator-v21_mtrl_linear_out_slow_in.xml.flat",
@@ -4209,11 +4329,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_giropay.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_giropay.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_giropay.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/animator_fragment_fade_enter.xml.flat",
-        "source": "com.iconic.socialv.app-fragment-1.8.6-60:/animator/fragment_fade_enter.xml"
+        "source": "com.iconic.socialv.app-fragment-1.8.6-59:/animator/fragment_fade_enter.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -4244,6 +4364,10 @@
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-anydpi-v21_ic_call_decline_low.xml.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-anydpi-v21/ic_call_decline_low.xml"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_edit_symbol.xml.flat",
         "source": "com.iconic.socialv.app-jetified-paymentsheet-21.6.0-116:/drawable/stripe_ic_edit_symbol.xml"
     },
@@ -4257,7 +4381,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_card_unionpay_day.xml.flat",
@@ -4293,11 +4417,15 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_brand_zone_view.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout/stripe_brand_zone_view.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout/stripe_brand_zone_view.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_masked_card_view.xml.flat",
         "source": "com.iconic.socialv.app-jetified-payments-core-21.6.0-98:/layout/stripe_masked_card_view.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_ic_call_answer_video_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xhdpi-v4/ic_call_answer_video_low.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout-land_material_clock_period_toggle_land.xml.flat",
@@ -4309,7 +4437,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_crypto.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_crypto.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_crypto.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_mtrl_tabs_icon_color_selector_colored.xml.flat",
@@ -4317,7 +4445,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_gnt_medium_template_view.xml.flat",
-        "source": "com.iconic.socialv.app-release-163:/layout/gnt_medium_template_view.xml"
+        "source": "com.iconic.socialv.app-release-162:/layout/gnt_medium_template_view.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_ic_call_answer.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-mdpi-v4/ic_call_answer.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_stripe_card_form_view_text_color.xml.flat",
@@ -4368,10 +4500,6 @@
         "source": "com.iconic.socialv.app-material-1.12.0-14:/anim/design_snackbar_in.xml"
     },
     {
-        "merged": "com.iconic.socialv.app-release-146:/drawable_ic_call_answer_video.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable/ic_call_answer_video.xml"
-    },
-    {
         "merged": "com.iconic.socialv.app-release-146:/layout_design_navigation_item_header.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/layout/design_navigation_item_header.xml"
     },
@@ -4413,11 +4541,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_boleto.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_boleto.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_boleto.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
@@ -4425,11 +4553,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xhdpi-v4_gpay_logo_generic_light.png.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-59:/drawable-xhdpi-v4/gpay_logo_generic_light.png"
+        "source": "com.iconic.socialv.app-jetified-play-services-wallet-19.4.0-58:/drawable-xhdpi-v4/gpay_logo_generic_light.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_klarna.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_klarna.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_klarna.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi_ic_stat_ic_notification.png.flat",
@@ -4437,11 +4565,11 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_paymentsheet_pm_swish.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_paymentsheet_pm_swish.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_paymentsheet_pm_swish.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-night-v8_stripe_3ds2_ic_arrow.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/drawable-night-v8/stripe_3ds2_ic_arrow.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/drawable-night-v8/stripe_3ds2_ic_arrow.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -4472,6 +4600,14 @@
         "source": "com.iconic.socialv.app-jetified-financial-connections-21.6.0-10:/drawable/stripe_ic_warning_circle.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-ldpi-v4_ic_call_answer_video_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-ldpi-v4/ic_call_answer_video_low.png"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-hdpi-v4_ic_call_answer.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-hdpi-v4/ic_call_answer.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
@@ -4485,7 +4621,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout-v21_notification_action.xml.flat",
-        "source": "com.iconic.socialv.app-core-1.15.0-97:/layout-v21/notification_action.xml"
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/layout-v21/notification_action.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/anim_btn_radio_to_off_mtrl_dot_group_animation.xml.flat",
@@ -4568,6 +4704,10 @@
         "source": "com.iconic.socialv.app-material-1.12.0-14:/interpolator-v21/m3_sys_motion_easing_standard_accelerate.xml"
     },
     {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_ic_call_decline_low.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-xxhdpi-v4/ic_call_decline_low.png"
+    },
+    {
         "merged": "com.iconic.socialv.app-release-146:/drawable-mdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "com.iconic.socialv.app-appcompat-1.6.1-101:/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
@@ -4609,7 +4749,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_challenge_zone_view.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-48:/layout/stripe_challenge_zone_view.xml"
+        "source": "com.iconic.socialv.app-jetified-stripe-3ds2-android-6.2.0-47:/layout/stripe_challenge_zone_view.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_stripe_card_widget_progress_view.xml.flat",
@@ -4626,6 +4766,10 @@
     {
         "merged": "com.iconic.socialv.app-release-146:/color_m3_chip_background_color.xml.flat",
         "source": "com.iconic.socialv.app-material-1.12.0-14:/color/m3_chip_background_color.xml"
+    },
+    {
+        "merged": "com.iconic.socialv.app-release-146:/drawable-ldpi-v4_ic_call_answer.png.flat",
+        "source": "com.iconic.socialv.app-core-1.13.1-64:/drawable-ldpi-v4/ic_call_answer.png"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/color_mtrl_chip_surface_color.xml.flat",
@@ -4681,7 +4825,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_stripe_ic_afterpay_logo.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable/stripe_ic_afterpay_logo.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable/stripe_ic_afterpay_logo.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_funny.png.flat",
@@ -4749,7 +4893,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_corner.xml.flat",
-        "source": "com.iconic.socialv.app-release-162:/drawable/corner.xml"
+        "source": "com.iconic.socialv.app-release-161:/drawable/corner.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -4757,7 +4901,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-night-v8_stripe_ic_paymentsheet_pm_sunbit.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable-night-v8/stripe_ic_paymentsheet_pm_sunbit.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable-night-v8/stripe_ic_paymentsheet_pm_sunbit.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_mtrl_alert_dialog_title.xml.flat",
@@ -4777,7 +4921,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/layout_offline_ads_dialog.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-play-services-ads-24.1.0-41:/layout/offline_ads_dialog.xml"
+        "source": "com.iconic.socialv.app-jetified-play-services-ads-23.6.0-71:/layout/offline_ads_dialog.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_abc_spinner_textfield_background_material.xml.flat",
@@ -4813,7 +4957,7 @@
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable-night-v8_stripe_ic_paymentsheet_pm_multibanco.xml.flat",
-        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-80:/drawable-night-v8/stripe_ic_paymentsheet_pm_multibanco.xml"
+        "source": "com.iconic.socialv.app-jetified-payments-ui-core-21.6.0-81:/drawable-night-v8/stripe_ic_paymentsheet_pm_multibanco.xml"
     },
     {
         "merged": "com.iconic.socialv.app-release-146:/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",

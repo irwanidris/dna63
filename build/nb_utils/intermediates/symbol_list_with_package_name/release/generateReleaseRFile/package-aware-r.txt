@@ -1,1 +1,1 @@
-com.example.nb_utils
+com.nb.nb_utils
