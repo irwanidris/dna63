@@ -38,7 +38,7 @@
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
 	<key>GADApplicationIdentifier</key>
-	<string>"Please add key here"</string>
+	<string>ca-app-pub-7933159179608841~4803587733</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppleMusicUsageDescription</key>
