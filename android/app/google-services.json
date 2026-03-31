@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "207214705257-fbrn3f2c831c1aelmp90mbv7am5311cd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rhinoresources.dna63",
+            "certificate_hash": "fc7a7e7d5bdf9abca2dd895e787086c883790951"
+          }
+        },
+        {
           "client_id": "207214705257-vi93ft1p7hclie6krhoquu5vdhsnad6q.apps.googleusercontent.com",
           "client_type": 3
         }
