@@ -51,8 +51,8 @@ const mTestAdMobBannerId = 'Please add your AdMob Test Banner ID here';
 /// STRIPE PAYMENT DETAIL
 const STRIPE_MERCHANT_COUNTRY_CODE = 'MY';
 const STRIPE_CURRENCY_CODE = 'MYR';
-const STRIPE_TEST_PAYMENT_KEY = 'Please add your Stripe Secret Key here';
-const STRIPE_TEST_PUBLISHABLE_KEY = 'pk_live_51I7IGpEvM09srKs7hW5T6yn2LltGHiCQ3QijHrYQB9IU08LantClVluFy8GLi1PjPMoW1KBo5BKeMJU8kVu02vn800koF8OQqm';
+const STRIPE_TEST_PAYMENT_KEY = String.fromEnvironment('STRIPE_SECRET_KEY', defaultValue: 'sk_test_your_key_here');
+const STRIPE_TEST_PUBLISHABLE_KEY = String.fromEnvironment('STRIPE_PUBLISHABLE_KEY', defaultValue: 'pk_test_your_key_here');
 
 /// RAZORPAY PAYMENT DETAIL
 const RAZORPAY_CURRENCY_CODE = 'INR';
